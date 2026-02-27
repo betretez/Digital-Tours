@@ -109,14 +109,6 @@ function initTour() {
                             body: 'Founded in 1886 by Black community leaders, South-View Cemetery is one of the oldest African American cemeteries in Atlanta. It serves as the final resting place for many prominent figures in civil rights history.'
                         }
                     },
-                    {
-                        pitch: -3,
-                        yaw: -20,
-                        type: 'info',
-                        text: 'John Wesley Dobbs',
-                        createTooltipFunc: personHotspot,
-                        createTooltipArgs: { personId: 'dobbs' }
-                    }
                 ]
             },
 
@@ -141,6 +133,14 @@ function initTour() {
                         type: 'scene',
                         text: 'Continue to Historic Section',
                         sceneId: 'historic_section'
+                    },
+                    {
+                        pitch: -3,
+                        yaw: -60,
+                        type: 'info',
+                        text: 'John Wesley Dobbs',
+                        createTooltipFunc: personHotspot,
+                        createTooltipArgs: { personId: 'dobbs' }
                     },
                     {
                         pitch: 2,
