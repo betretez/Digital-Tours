@@ -86,21 +86,21 @@ function initTour() {
             entrance: {
                 title: 'Cemetery Entrance',
                 hfov: 110,
-                pitch: -3,
+                pitch: -5,
                 yaw: 0,
                 type: 'equirectangular',
-                panorama: 'images/snowy_cemetery.jpg',
+                panorama: 'images/equirect_001.jpg',
                 hotSpots: [
                     {
-                        pitch: -2,
-                        yaw: 30,
+                        pitch: -8,
+                        yaw: 10,
                         type: 'scene',
-                        text: 'Walk to Historic Section',
-                        sceneId: 'historic_section'
+                        text: 'Walk into Cemetery',
+                        sceneId: 'main_path'
                     },
                     {
-                        pitch: 5,
-                        yaw: -40,
+                        pitch: 2,
+                        yaw: -60,
                         type: 'info',
                         text: 'South-View Cemetery',
                         createTooltipFunc: infoHotspot,
@@ -110,8 +110,8 @@ function initTour() {
                         }
                     },
                     {
-                        pitch: -5,
-                        yaw: -10,
+                        pitch: -3,
+                        yaw: -20,
                         type: 'info',
                         text: 'John Wesley Dobbs',
                         createTooltipFunc: personHotspot,
@@ -120,72 +120,191 @@ function initTour() {
                 ]
             },
 
-            historic_section: {
-                title: 'Historic Section',
+            main_path: {
+                title: 'Cemetery Path',
                 hfov: 110,
-                pitch: -3,
-                yaw: 120,
+                pitch: -5,
+                yaw: 0,
                 type: 'equirectangular',
-                panorama: 'images/snowy_cemetery.jpg',
+                panorama: 'images/equirect_003.jpg',
                 hotSpots: [
                     {
-                        pitch: -2,
-                        yaw: -60,
+                        pitch: -8,
+                        yaw: 175,
                         type: 'scene',
-                        text: 'Return to Entrance',
+                        text: 'Back to Entrance',
                         sceneId: 'entrance'
                     },
                     {
-                        pitch: 0,
-                        yaw: 80,
+                        pitch: -8,
+                        yaw: 0,
                         type: 'scene',
-                        text: 'Walk to Memorial Garden',
-                        sceneId: 'memorial_garden'
+                        text: 'Continue to Historic Section',
+                        sceneId: 'historic_section'
                     },
                     {
-                        pitch: 3,
-                        yaw: 20,
+                        pitch: 2,
+                        yaw: 80,
                         type: 'info',
-                        text: 'Alonzo Herndon',
-                        createTooltipFunc: personHotspot,
-                        createTooltipArgs: { personId: 'herndon' }
+                        text: 'About the Grounds',
+                        createTooltipFunc: infoHotspot,
+                        createTooltipArgs: {
+                            title: 'The Grounds',
+                            body: 'South-View spans over 88 acres across two sites. The cemetery was established as a dignified resting place for Atlanta\'s Black community during the era of segregation, when Black residents were denied access to the city\'s white cemeteries.'
+                        }
                     }
                 ]
             },
 
-            memorial_garden: {
-                title: 'Memorial Garden',
+            historic_section: {
+                title: 'Historic Section',
                 hfov: 110,
-                pitch: -3,
-                yaw: -90,
+                pitch: -5,
+                yaw: 0,
                 type: 'equirectangular',
-                panorama: 'images/snowy_cemetery.jpg',
+                panorama: 'images/equirect_006.jpg',
                 hotSpots: [
                     {
-                        pitch: -2,
-                        yaw: -90,
+                        pitch: -8,
+                        yaw: 175,
+                        type: 'scene',
+                        text: 'Back to Path',
+                        sceneId: 'main_path'
+                    },
+                    {
+                        pitch: -8,
+                        yaw: 0,
+                        type: 'scene',
+                        text: 'Deeper into Historic Area',
+                        sceneId: 'ancient_area'
+                    },
+                    {
+                        pitch: 2,
+                        yaw: -60,
+                        type: 'info',
+                        text: 'Alonzo Herndon',
+                        createTooltipFunc: personHotspot,
+                        createTooltipArgs: { personId: 'herndon' }
+                    },
+                    {
+                        pitch: 3,
+                        yaw: 60,
+                        type: 'info',
+                        text: 'Historic Burials',
+                        createTooltipFunc: infoHotspot,
+                        createTooltipArgs: {
+                            title: 'Historic Burials',
+                            body: 'This section contains graves dating back to the late 1800s. Many markers belong to formerly enslaved individuals and the first generation of free Black Atlantans who built businesses, churches, and civic institutions.'
+                        }
+                    }
+                ]
+            },
+
+            ancient_area: {
+                title: 'Older Burial Ground',
+                hfov: 110,
+                pitch: -5,
+                yaw: 0,
+                type: 'equirectangular',
+                panorama: 'images/equirect_007.jpg',
+                hotSpots: [
+                    {
+                        pitch: -8,
+                        yaw: 175,
                         type: 'scene',
                         text: 'Back to Historic Section',
                         sceneId: 'historic_section'
                     },
                     {
-                        pitch: 5,
-                        yaw: 45,
-                        type: 'info',
-                        text: 'About This Space',
-                        createTooltipFunc: infoHotspot,
-                        createTooltipArgs: {
-                            title: 'Memorial Garden',
-                            body: 'This peaceful area honors the collective memory of those interred at South-View. Community gatherings and memorial services are held here throughout the year.'
-                        }
+                        pitch: -8,
+                        yaw: 0,
+                        type: 'scene',
+                        text: 'Walk to Monument Row',
+                        sceneId: 'monument_row'
                     },
                     {
-                        pitch: -3,
-                        yaw: 10,
+                        pitch: 5,
+                        yaw: 30,
+                        type: 'info',
+                        text: 'Early Headstones',
+                        createTooltipFunc: infoHotspot,
+                        createTooltipArgs: {
+                            title: 'Early Headstones',
+                            body: 'These weathered stones mark some of the earliest burials at South-View. The modest markers reflect the material circumstances of the community at the time — their presence here is a testament to survival and remembrance.'
+                        }
+                    }
+                ]
+            },
+
+            monument_row: {
+                title: 'Marble Monument Row',
+                hfov: 110,
+                pitch: -5,
+                yaw: 0,
+                type: 'equirectangular',
+                panorama: 'images/equirect_009.jpg',
+                hotSpots: [
+                    {
+                        pitch: -8,
+                        yaw: 175,
+                        type: 'scene',
+                        text: 'Back to Older Burial Ground',
+                        sceneId: 'ancient_area'
+                    },
+                    {
+                        pitch: -8,
+                        yaw: 0,
+                        type: 'scene',
+                        text: 'King Family Memorial',
+                        sceneId: 'king_memorial'
+                    },
+                    {
+                        pitch: 2,
+                        yaw: 90,
+                        type: 'info',
+                        text: 'Notable Monuments',
+                        createTooltipFunc: infoHotspot,
+                        createTooltipArgs: {
+                            title: 'Marble Mausolea',
+                            body: 'These grand marble structures mark the resting places of prominent Atlanta families. By the early 20th century, successful Black business owners and civic leaders commissioned elaborate monuments as enduring symbols of their community\'s achievement and dignity.'
+                        }
+                    }
+                ]
+            },
+
+            king_memorial: {
+                title: 'King Family Memorial',
+                hfov: 110,
+                pitch: -5,
+                yaw: 0,
+                type: 'equirectangular',
+                panorama: 'images/equirect_010.jpg',
+                hotSpots: [
+                    {
+                        pitch: -8,
+                        yaw: 175,
+                        type: 'scene',
+                        text: 'Back to Monument Row',
+                        sceneId: 'monument_row'
+                    },
+                    {
+                        pitch: 0,
+                        yaw: 30,
                         type: 'info',
                         text: 'Martin Luther King Sr.',
                         createTooltipFunc: personHotspot,
                         createTooltipArgs: { personId: 'king_sr' }
+                    },
+                    {
+                        pitch: 5,
+                        yaw: -40,
+                        type: 'info',
+                        text: 'King Family',
+                        createTooltipFunc: infoHotspot,
+                        createTooltipArgs: {
+                            title: 'The King Family',
+                            body: 'The King family monument stands as one of the most visited sites at South-View. Martin Luther King Sr., known as "Daddy King," is interred here along with other family members. His legacy of faith and justice laid the foundation for the civil rights movement.'
+                        }
                     }
                 ]
             }
@@ -209,8 +328,11 @@ function onSceneChange(sceneId) {
 function updateSceneLabel(sceneId) {
     const labels = {
         entrance: 'Cemetery Entrance',
+        main_path: 'Cemetery Path',
         historic_section: 'Historic Section',
-        memorial_garden: 'Memorial Garden'
+        ancient_area: 'Older Burial Ground',
+        monument_row: 'Marble Monument Row',
+        king_memorial: 'King Family Memorial'
     };
     const label = document.getElementById('current-scene-label');
     label.style.opacity = 0;
@@ -251,7 +373,7 @@ document.querySelectorAll('.timeline-marker').forEach(marker => {
         // Map timeline events to people/scenes
         const year = marker.dataset.year;
         const yearToAction = {
-            '1886': () => { if (viewer) viewer.loadScene('entrance'); },
+            '1886': () => { if (viewer) viewer.loadScene('entrance'); viewer && updateMinimap('entrance'); },
             '1899': () => showPerson('king_sr'),
             '1905': () => showPerson('herndon'),
             '1927': () => showPerson('herndon'),

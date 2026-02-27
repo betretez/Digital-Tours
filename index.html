@@ -64,24 +64,33 @@
         <!-- Mini-map -->
         <div id="minimap">
             <div class="minimap-inner">
-                <svg viewBox="0 0 200 140" width="200" height="140">
+                <svg viewBox="0 0 200 160" width="200" height="160">
                     <!-- Cemetery outline -->
-                    <rect x="10" y="10" width="180" height="120" rx="8"
+                    <rect x="10" y="10" width="180" height="140" rx="8"
                         fill="none" stroke="rgba(212,175,55,0.2)" stroke-width="1"/>
-                    <!-- Paths -->
-                    <line x1="55" y1="30" x2="100" y2="70" stroke="rgba(255,255,255,0.1)" stroke-width="1" stroke-dasharray="4"/>
-                    <line x1="100" y1="70" x2="150" y2="105" stroke="rgba(255,255,255,0.1)" stroke-width="1" stroke-dasharray="4"/>
+                    <!-- Path line connecting all scenes -->
+                    <polyline points="30,30 60,55 90,80 120,95 155,110 175,130"
+                        fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1" stroke-dasharray="4"/>
                     <!-- Location dots -->
-                    <circle cx="55" cy="30" r="6" class="map-dot" data-scene="entrance"/>
-                    <circle cx="100" cy="70" r="6" class="map-dot" data-scene="historic_section"/>
-                    <circle cx="150" cy="105" r="6" class="map-dot" data-scene="memorial_garden"/>
+                    <circle cx="30"  cy="30"  r="6" class="map-dot" data-scene="entrance"/>
+                    <circle cx="60"  cy="55"  r="6" class="map-dot" data-scene="main_path"/>
+                    <circle cx="90"  cy="80"  r="6" class="map-dot" data-scene="historic_section"/>
+                    <circle cx="120" cy="95"  r="6" class="map-dot" data-scene="ancient_area"/>
+                    <circle cx="155" cy="110" r="6" class="map-dot" data-scene="monument_row"/>
+                    <circle cx="175" cy="130" r="6" class="map-dot" data-scene="king_memorial"/>
                     <!-- Labels -->
-                    <text x="55" y="48" text-anchor="middle" fill="rgba(255,255,255,0.5)"
-                        font-family="Cormorant Garamond" font-size="8">Entrance</text>
-                    <text x="100" y="88" text-anchor="middle" fill="rgba(255,255,255,0.5)"
-                        font-family="Cormorant Garamond" font-size="8">Historic</text>
-                    <text x="150" y="123" text-anchor="middle" fill="rgba(255,255,255,0.5)"
-                        font-family="Cormorant Garamond" font-size="8">Memorial</text>
+                    <text x="30"  y="46"  text-anchor="middle" fill="rgba(255,255,255,0.5)"
+                        font-family="Cormorant Garamond" font-size="7">Entrance</text>
+                    <text x="60"  y="71"  text-anchor="middle" fill="rgba(255,255,255,0.5)"
+                        font-family="Cormorant Garamond" font-size="7">Path</text>
+                    <text x="90"  y="96"  text-anchor="middle" fill="rgba(255,255,255,0.5)"
+                        font-family="Cormorant Garamond" font-size="7">Historic</text>
+                    <text x="118" y="110" text-anchor="middle" fill="rgba(255,255,255,0.5)"
+                        font-family="Cormorant Garamond" font-size="7">Older</text>
+                    <text x="155" y="126" text-anchor="middle" fill="rgba(255,255,255,0.5)"
+                        font-family="Cormorant Garamond" font-size="7">Monuments</text>
+                    <text x="175" y="146" text-anchor="middle" fill="rgba(255,255,255,0.5)"
+                        font-family="Cormorant Garamond" font-size="7">King</text>
                 </svg>
             </div>
             <div class="minimap-label">MAP</div>
