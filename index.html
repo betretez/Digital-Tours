@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/tour.css?v=3">
+    <link rel="stylesheet" href="css/tour.css?v=11">
 </head>
 <body>
 
@@ -54,7 +54,7 @@
             </div>
             <div class="header-center">
                 <div class="header-scene-name" id="current-scene-label">Cemetery Entrance</div>
-                <div class="header-counter" id="scene-counter">1 of 12</div>
+                <div class="header-counter" id="scene-counter">1 of 32</div>
             </div>
         </div>
     </header>
@@ -108,81 +108,189 @@
 
     </div><!-- /right-panel -->
 
-    <!-- Mini-map: 12-scene winding path -->
+    <!-- Mini-map: 32-scene curved cemetery path -->
     <div id="minimap">
         <div class="minimap-inner">
-            <svg viewBox="0 0 210 170" width="210" height="170">
-                <!-- Cemetery boundary -->
-                <rect x="8" y="8" width="194" height="154" rx="8"
-                    fill="none" stroke="rgba(212,175,55,0.15)" stroke-width="1"/>
+            <svg viewBox="0 0 210 200" width="210" height="200">
+                <!-- Cemetery field with subtle green tint -->
+                <rect x="8" y="8" width="194" height="184" rx="8"
+                    fill="rgba(14,26,14,0.45)" stroke="rgba(212,175,55,0.22)" stroke-width="1"/>
 
-                <!-- Path line through 12 scenes -->
-                <polyline
-                    points="22,22 46,30 68,40 80,58 80,82 76,106 85,120 108,122 128,112 154,108 172,120 188,147"
-                    fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" stroke-dasharray="3 2"/>
+                <!-- Tiny scattered tree symbols (small filled circles) -->
+                <circle cx="36"  cy="57"  r="2.5" fill="rgba(45,90,40,0.5)"/>
+                <circle cx="82"  cy="54"  r="2"   fill="rgba(45,90,40,0.4)"/>
+                <circle cx="130" cy="58"  r="2.5" fill="rgba(45,90,40,0.45)"/>
+                <circle cx="168" cy="53"  r="2"   fill="rgba(45,90,40,0.4)"/>
+                <circle cx="55"  cy="102" r="2"   fill="rgba(45,90,40,0.4)"/>
+                <circle cx="108" cy="99"  r="2.5" fill="rgba(45,90,40,0.45)"/>
+                <circle cx="155" cy="103" r="2"   fill="rgba(45,90,40,0.4)"/>
+                <circle cx="75"  cy="147" r="2.5" fill="rgba(45,90,40,0.45)"/>
+                <circle cx="140" cy="145" r="2"   fill="rgba(45,90,40,0.4)"/>
+                <circle cx="175" cy="148" r="2"   fill="rgba(45,90,40,0.35)"/>
+
+                <!-- Main path (dashed white) -->
+                <path d="M 20,30 H 190 C 203,30 203,75 190,75 H 20 C 7,75 7,120 20,120 H 190 C 203,120 203,165 190,165 H 20"
+                    fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-dasharray="4 3"/>
+
+                <!-- Direction arrows (small gold triangles showing travel direction) -->
+                <!-- Row 1 → right -->
+                <polygon points="102,27.5 108,30 102,32.5" fill="rgba(212,175,55,0.6)"/>
+                <!-- Row 2 → left -->
+                <polygon points="110,72.5 104,75 110,77.5" fill="rgba(212,175,55,0.6)"/>
+                <!-- Row 3 → right -->
+                <polygon points="102,117.5 108,120 102,122.5" fill="rgba(212,175,55,0.6)"/>
+                <!-- Row 4 → left -->
+                <polygon points="110,162.5 104,165 110,167.5" fill="rgba(212,175,55,0.6)"/>
 
                 <!-- Section labels -->
-                <text x="30" y="16" text-anchor="middle" fill="rgba(212,175,55,0.55)"
-                    font-family="Cormorant Garamond" font-size="6">Entrance</text>
-                <text x="62" y="58" text-anchor="end" fill="rgba(255,255,255,0.35)"
-                    font-family="Cormorant Garamond" font-size="6">Historic</text>
-                <text x="145" y="100" text-anchor="middle" fill="rgba(255,255,255,0.35)"
-                    font-family="Cormorant Garamond" font-size="6">Memorial</text>
-                <text x="188" y="158" text-anchor="middle" fill="rgba(212,175,55,0.55)"
-                    font-family="Cormorant Garamond" font-size="6">End</text>
+                <text x="38" y="19" text-anchor="middle" fill="rgba(212,175,55,0.65)"
+                    font-family="Cormorant Garamond" font-size="6" letter-spacing="0.5">Entrance</text>
+                <text x="105" y="92" text-anchor="middle" fill="rgba(255,255,255,0.32)"
+                    font-family="Cormorant Garamond" font-size="5.5" letter-spacing="0.5">Historic</text>
+                <text x="105" y="137" text-anchor="middle" fill="rgba(255,255,255,0.32)"
+                    font-family="Cormorant Garamond" font-size="5.5" letter-spacing="0.5">Memorial</text>
+                <text x="34" y="183" text-anchor="middle" fill="rgba(212,175,55,0.65)"
+                    font-family="Cormorant Garamond" font-size="6" letter-spacing="0.5">End</text>
 
-                <!-- 12 scene dots -->
-                <circle cx="22"  cy="22"  r="4" class="map-dot" data-scene="s01"/>
-                <circle cx="46"  cy="30"  r="4" class="map-dot" data-scene="s02"/>
-                <circle cx="68"  cy="40"  r="4" class="map-dot" data-scene="s03"/>
-                <circle cx="80"  cy="58"  r="4" class="map-dot" data-scene="s04"/>
-                <circle cx="80"  cy="82"  r="4" class="map-dot" data-scene="s05"/>
-                <circle cx="76"  cy="106" r="4" class="map-dot" data-scene="s06"/>
-                <circle cx="85"  cy="120" r="4" class="map-dot" data-scene="s07"/>
-                <circle cx="108" cy="122" r="4" class="map-dot" data-scene="s08"/>
-                <circle cx="128" cy="112" r="4" class="map-dot" data-scene="s09"/>
-                <circle cx="154" cy="108" r="4" class="map-dot" data-scene="s10"/>
-                <circle cx="172" cy="120" r="4" class="map-dot" data-scene="s11"/>
-                <circle cx="188" cy="147" r="4" class="map-dot" data-scene="s12"/>
+                <!-- Row 1: s01–s08 (L→R, y=30) -->
+                <circle cx="20"  cy="30" r="4" class="map-dot" data-scene="s01"/>
+                <circle cx="46"  cy="30" r="4" class="map-dot" data-scene="s02"/>
+                <circle cx="72"  cy="30" r="4" class="map-dot" data-scene="s03"/>
+                <circle cx="98"  cy="30" r="4" class="map-dot" data-scene="s04"/>
+                <circle cx="124" cy="30" r="4" class="map-dot" data-scene="s05"/>
+                <circle cx="150" cy="30" r="4" class="map-dot" data-scene="s06"/>
+                <circle cx="176" cy="30" r="4" class="map-dot" data-scene="s07"/>
+                <circle cx="190" cy="30" r="4" class="map-dot" data-scene="s08"/>
+
+                <!-- Row 2: s09–s16 (R→L, y=75) -->
+                <circle cx="190" cy="75" r="4" class="map-dot" data-scene="s09"/>
+                <circle cx="176" cy="75" r="4" class="map-dot" data-scene="s10"/>
+                <circle cx="150" cy="75" r="4" class="map-dot" data-scene="s11"/>
+                <circle cx="124" cy="75" r="4" class="map-dot" data-scene="s12"/>
+                <circle cx="98"  cy="75" r="4" class="map-dot" data-scene="s13"/>
+                <circle cx="72"  cy="75" r="4" class="map-dot" data-scene="s14"/>
+                <circle cx="46"  cy="75" r="4" class="map-dot" data-scene="s15"/>
+                <circle cx="20"  cy="75" r="4" class="map-dot" data-scene="s16"/>
+
+                <!-- Row 3: s17–s24 (L→R, y=120) -->
+                <circle cx="20"  cy="120" r="4" class="map-dot" data-scene="s17"/>
+                <circle cx="46"  cy="120" r="4" class="map-dot" data-scene="s18"/>
+                <circle cx="72"  cy="120" r="4" class="map-dot" data-scene="s19"/>
+                <circle cx="98"  cy="120" r="4" class="map-dot" data-scene="s20"/>
+                <circle cx="124" cy="120" r="4" class="map-dot" data-scene="s21"/>
+                <circle cx="150" cy="120" r="4" class="map-dot" data-scene="s22"/>
+                <circle cx="176" cy="120" r="4" class="map-dot" data-scene="s23"/>
+                <circle cx="190" cy="120" r="4" class="map-dot" data-scene="s24"/>
+
+                <!-- Row 4: s25–s32 (R→L, y=165) -->
+                <circle cx="190" cy="165" r="4" class="map-dot" data-scene="s25"/>
+                <circle cx="176" cy="165" r="4" class="map-dot" data-scene="s26"/>
+                <circle cx="150" cy="165" r="4" class="map-dot" data-scene="s27"/>
+                <circle cx="124" cy="165" r="4" class="map-dot" data-scene="s28"/>
+                <circle cx="98"  cy="165" r="4" class="map-dot" data-scene="s29"/>
+                <circle cx="72"  cy="165" r="4" class="map-dot" data-scene="s30"/>
+                <circle cx="46"  cy="165" r="4" class="map-dot" data-scene="s31"/>
+                <circle cx="20"  cy="165" r="4" class="map-dot" data-scene="s32"/>
             </svg>
         </div>
-        <div class="minimap-label">JUNETEENTH PATH · 12 STOPS</div>
+        <div class="minimap-label">JUNETEENTH PATH · 32 STOPS</div>
     </div>
 
     <!-- Timeline -->
     <div id="timeline">
         <div class="timeline-track">
+            <!-- 19 entries evenly spaced at i*(100/18) % -->
             <div class="timeline-marker" data-year="1865" data-scene="s01" style="left:0%">
                 <span class="timeline-dot"></span>
                 <span class="timeline-year">1865</span>
                 <span class="timeline-event">Juneteenth</span>
             </div>
-            <div class="timeline-marker" data-year="1886" data-scene="s01" style="left:13.5%">
+            <div class="timeline-marker" data-year="1886" data-scene="s01" style="left:5.6%">
                 <span class="timeline-dot"></span>
                 <span class="timeline-year">1886</span>
                 <span class="timeline-event">Cemetery Founded</span>
             </div>
-            <div class="timeline-marker" data-year="1905" data-scene="s05" style="left:25.6%">
+            <div class="timeline-marker" data-year="1894" data-scene="s16" style="left:11.1%">
+                <span class="timeline-dot"></span>
+                <span class="timeline-year">1894</span>
+                <span class="timeline-event">Williams at Ebenezer</span>
+            </div>
+            <div class="timeline-marker" data-year="1904" data-scene="s12" style="left:16.7%">
+                <span class="timeline-dot"></span>
+                <span class="timeline-year">1904</span>
+                <span class="timeline-event">Adrienne's Debut</span>
+            </div>
+            <div class="timeline-marker" data-year="1905" data-scene="s13" style="left:22.2%">
                 <span class="timeline-dot"></span>
                 <span class="timeline-year">1905</span>
-                <span class="timeline-event">Herndon's Vision</span>
+                <span class="timeline-event">Herndon's Empire</span>
             </div>
-            <div class="timeline-marker" data-year="1927" data-scene="s05" style="left:39.7%">
+            <div class="timeline-marker" data-year="1906" data-scene="s15" style="left:27.8%">
+                <span class="timeline-dot"></span>
+                <span class="timeline-year">1906</span>
+                <span class="timeline-event">Race Massacre</span>
+            </div>
+            <div class="timeline-marker" data-year="1911" data-scene="s07" style="left:33.3%">
+                <span class="timeline-dot"></span>
+                <span class="timeline-year">1911</span>
+                <span class="timeline-event">Moses Amos</span>
+            </div>
+            <div class="timeline-marker" data-year="1927" data-scene="s13" style="left:38.9%">
                 <span class="timeline-dot"></span>
                 <span class="timeline-year">1927</span>
                 <span class="timeline-event">Herndon Passes</span>
             </div>
-            <div class="timeline-marker" data-year="1961" data-scene="s09" style="left:61.5%">
+            <div class="timeline-marker" data-year="1944" data-scene="s11" style="left:44.4%">
+                <span class="timeline-dot"></span>
+                <span class="timeline-year">1944</span>
+                <span class="timeline-event">Tuskegee Airman</span>
+            </div>
+            <div class="timeline-marker" data-year="1948" data-scene="s02" style="left:50%">
+                <span class="timeline-dot"></span>
+                <span class="timeline-year">1948</span>
+                <span class="timeline-event">Dobbs Desegregates</span>
+            </div>
+            <div class="timeline-marker" data-year="1950" data-scene="s04" style="left:55.6%">
+                <span class="timeline-dot"></span>
+                <span class="timeline-year">1950</span>
+                <span class="timeline-event">Pitts Home</span>
+            </div>
+            <div class="timeline-marker" data-year="1961" data-scene="s02" style="left:61.1%">
                 <span class="timeline-dot"></span>
                 <span class="timeline-year">1961</span>
                 <span class="timeline-event">Dobbs Passes</span>
             </div>
-            <div class="timeline-marker" data-year="1984" data-scene="s11" style="left:76.3%">
+            <div class="timeline-marker" data-year="1963" data-scene="s30" style="left:66.7%">
+                <span class="timeline-dot"></span>
+                <span class="timeline-year">1963</span>
+                <span class="timeline-event">March on Washington</span>
+            </div>
+            <div class="timeline-marker" data-year="1974" data-scene="s27" style="left:72.2%">
+                <span class="timeline-dot"></span>
+                <span class="timeline-year">1974</span>
+                <span class="timeline-event">Aaron Breaks Record</span>
+            </div>
+            <div class="timeline-marker" data-year="1984" data-scene="s26" style="left:77.8%">
                 <span class="timeline-dot"></span>
                 <span class="timeline-year">1984</span>
                 <span class="timeline-event">MLK Sr. Passes</span>
             </div>
-            <div class="timeline-marker" data-year="2021" data-scene="s12" style="left:100%">
+            <div class="timeline-marker" data-year="2015" data-scene="s30" style="left:83.3%">
+                <span class="timeline-dot"></span>
+                <span class="timeline-year">2015</span>
+                <span class="timeline-event">Bond Passes</span>
+            </div>
+            <div class="timeline-marker" data-year="2018" data-scene="s32" style="left:88.9%">
+                <span class="timeline-dot"></span>
+                <span class="timeline-year">2018</span>
+                <span class="timeline-event">Bench Installed</span>
+            </div>
+            <div class="timeline-marker" data-year="2020" data-scene="s23" style="left:94.4%">
+                <span class="timeline-dot"></span>
+                <span class="timeline-year">2020</span>
+                <span class="timeline-event">Lewis Passes</span>
+            </div>
+            <div class="timeline-marker" data-year="2021" data-scene="s01" style="left:100%">
                 <span class="timeline-dot"></span>
                 <span class="timeline-year">2021</span>
                 <span class="timeline-event">Federal Holiday</span>

@@ -18,41 +18,157 @@ const people = {
     audio: null
   },
   dobbs: {
-    name:  'John Wesley Dobbs',
+    name:  'John Wesley Dobbs & Family',
     dates: '1882 – 1961',
     photo: 'images/dobbs.jpg',
     facts: [
-      'Grand Master of Georgia\'s Prince Hall Masons for 35 years',
-      'Organized Atlanta\'s first large-scale voter-registration drive for Black citizens in 1932',
-      '"The Mayor of Auburn Avenue" — the heart of Black Atlanta commerce and culture',
-      'Grandfather of Maynard Jackson, Atlanta\'s first Black mayor',
-      'His oratory and organizing inspired a generation of Civil Rights leaders'
+      'Often called "The Mayor of Auburn Avenue," Dobbs coined the term "Sweet Auburn" for the thriving Black business and civic corridor',
+      'Grand Master of Georgia\'s Prince Hall Masons; the broken column on his gravesite signifies he held that office until death',
+      'Founded the Atlanta Civic and Political League, the Atlanta Negro Voters League, and the Georgia Voters League in the 1930s–40s',
+      'Led a voter-registration drive in the 1940s now recognized as the birth of Atlanta\'s modern Civil Rights Era',
+      'Was instrumental in desegregating the Atlanta Police Department in 1948, when eight Black officers joined the force — though they could only patrol Black neighborhoods on foot and were required to use the Butler Street YMCA as their precinct',
+      'Grandfather of Maynard Jackson, Atlanta\'s first Black mayor'
     ],
     audio: null
   },
   king_sr: {
-    name:  'Rev. Martin Luther King Sr.',
+    name:  'Rev. & Mrs. Martin Luther King Sr.',
     dates: '1899 – 1984',
     photo: 'images/king_sr.jpg',
     facts: [
-      'Pastor of Ebenezer Baptist Church for 44 years',
-      'Father of Dr. Martin Luther King Jr.',
-      'Led the successful campaign to equalize teachers\' salaries in Atlanta in 1942',
-      'Renamed himself and his eldest son after Protestant reformer Martin Luther',
-      'Survived the assassination of his son (1968) and the murder of his wife Alberta at the church organ (1974)'
+      'Pastor of Ebenezer Baptist Church for 44 years; involved in the Atlanta Civic and Political League and the NAACP',
+      'Led a voting-rights march on Atlanta City Hall in 1936 and advocated successfully for equalization of teacher pay',
+      'Served on the boards of Atlanta University and Morehouse College',
+      'His wife Alberta Williams King started the Ebenezer choir while her father A. D. Williams was pastor; she was killed by a gunman as she played "The Lord\'s Prayer" during Sunday worship at Ebenezer',
+      'Alberta\'s remains rest on the same side of the crypt where their son Dr. Martin Luther King Jr. was first placed after his assassination in 1968',
+      'Parents of Dr. Martin Luther King Jr.'
     ],
     audio: null
   },
   williams_ad: {
-    name:  'Rev. Adam Daniel Williams',
-    dates: '1863 – 1931',
+    name:  'Rev. A. D. & Jennie Williams',
+    dates: 'A.D. 1863 – 1931 · Jennie 1873 – 1941',
     photo: null,
     facts: [
-      'Born January 2, 1863, in Greene County, Georgia — the son of a Baptist preacher',
-      'Served as pastor of Ebenezer Baptist Church from 1894 to 1931, growing its membership from 13 to over 750',
-      'Co-founded the Atlanta chapter of the NAACP in 1909 and served as its first president',
-      'Led one of Atlanta\'s first major civil rights campaigns, boycotting a bond issue that excluded Black schools in 1917',
-      'Grandfather of Dr. Martin Luther King Jr. — his daughter Alberta married Rev. Martin Luther King Sr. in 1926'
+      'Adam Daniel Williams was the second pastor of Ebenezer Baptist Church; in his first year he grew the congregation from a handful of members to more than 60',
+      'Developed Ebenezer as both a religious institution and a center for political and community activity; received his doctor of divinity from Morehouse College',
+      'Helped establish the Atlanta branch of the NAACP in 1917 and later served as its president',
+      'Jennie Celeste Parks Williams was deeply involved in all aspects of Ebenezer and led the church\'s missionary society',
+      'Their daughter, Alberta Williams King, was the mother of Dr. Martin Luther King Jr.',
+      'Maternal grandparents of Dr. Martin Luther King Jr.'
+    ],
+    audio: null
+  },
+  pitts: {
+    name:  'Clara Maxwell Cater Pitts',
+    dates: null,
+    photo: null,
+    facts: [
+      'Served as superintendent of the Carrie Steele Orphans Home, modernizing its operations and relocating the facility to Roy Street in southwest Atlanta',
+      'Secured funding for the home through the Atlanta Community Chest — later the United Way',
+      'In 1950 the orphanage was renamed the Carrie Steele Pitts Home in her honor',
+      'An Atlanta Public School was also named in her honor'
+    ],
+    audio: null
+  },
+  amos: {
+    name:  'Moses Amos',
+    dates: null,
+    photo: null,
+    facts: [
+      'In June 1911 passed the Georgia State pharmacy exam and became the first African American granted a druggist license by the Georgia State Board of Pharmacy',
+      'Worked at the Huss Pharmacy on Peachtree Street early in his career, then became proprietor of the Gate City Drug Store on Auburn Avenue',
+      'In 1914 opened a new Gate City Drugstore in the Odd Fellows Building and hired the first African American woman to work in a public place in Atlanta',
+      'Employed nine young African American men who went on to earn college degrees and establish careers in pharmacy, medicine, and dentistry'
+    ],
+    audio: null
+  },
+  pace: {
+    name:  'Dinah Watts Pace',
+    dates: '1833 – 1930',
+    photo: null,
+    facts: [
+      'Born enslaved in Athens, Georgia in 1833; as a teenager started a Sunday School in the Summer Hill neighborhood that grew into the Reed Street Baptist Church (today Paradise Missionary Baptist Church)',
+      'Graduated from Atlanta University with a teaching certificate and taught in Covington, Georgia',
+      'Founded one of the first orphanages for African American children in Georgia — the Covington Colored Orphans Home; Wellesley College students were regular contributors',
+      'The orphanage operated until 1930 when Pace was fatally burned in an open fireplace accident'
+    ],
+    audio: null
+  },
+  adrienne_herndon: {
+    name:  'Adrienne Herndon',
+    dates: null,
+    photo: null,
+    facts: [
+      'Graduated from Atlanta University and became one of the first African American faculty members at her alma mater, teaching elocution and staging Shakespearean productions',
+      'Made her professional acting debut in Boston in 1904 under the stage name Anne Du Bignon',
+      'Graduated from the School of Dramatic Arts in New York City in 1908',
+      'Designed Diamond Hill — the Herndon family\'s two-story, fifteen-room mansion in Atlanta',
+      'Wife of Alonzo Franklin Herndon'
+    ],
+    audio: null
+  },
+  wilder: {
+    name:  'George "Union" Wilder',
+    dates: null,
+    photo: null,
+    facts: [
+      'Union Army veteran who settled in the Brownsville community of Atlanta after the Civil War',
+      'Killed on September 22, 1906, during the Atlanta Race Massacre while defending his home with a muzzle-loaded musket against a white mob',
+      'His stand in Brownsville is credited with slowing the rioters and helping stem their momentum',
+      'The massacre officially acknowledged the deaths of 12 African Americans and 2 white men, though the true toll was likely higher'
+    ],
+    audio: null
+  },
+  westmoreland: {
+    name:  'First Lt. Walter Westmoreland',
+    dates: null,
+    photo: null,
+    facts: [
+      'Graduated from Morehouse College and earned a master\'s degree from Atlanta University',
+      'As a Tuskegee Airman, flew with the 332nd Fighter Squadron of the 302nd Group during World War II',
+      'The 332nd painted the tails of their aircraft solid red, earning the nickname "Red Tail Flyers"',
+      'His plane was shot down on October 13, 1944, while returning from an escort mission to Blechhammer, Germany'
+    ],
+    audio: null
+  },
+  henry_aaron: {
+    name:  'Henry "Hank" Aaron',
+    dates: '1934 – 2021',
+    photo: null,
+    facts: [
+      'Surpassed Babe Ruth\'s career home run record despite enduring racial insults and death threats throughout his pursuit of the record',
+      'Became the first Black American to hold a senior management position in baseball as a front office executive with the Atlanta Braves',
+      'Used his Hall of Fame career as a platform to champion civil rights; served as a director on the board of the NAACP',
+      'Awarded the Presidential Medal of Freedom by President George W. Bush for his philanthropy and humanitarian work',
+      'Received the Thurgood Marshall Lifetime Achievement Award from the NAACP Legal Defense Fund',
+      'Inducted into the International Civil Rights Walk of Fame at the Martin Luther King Jr. National Historic Park'
+    ],
+    audio: null
+  },
+  julian_bond: {
+    name:  'Julian Bond',
+    dates: '1940 – 2015',
+    photo: null,
+    facts: [
+      'Civil rights leader, politician, and scholar; his activism began as a student at Morehouse College',
+      'Among the first leaders of SNCC (Student Nonviolent Coordinating Committee), organizing picket lines, sit-ins, and boycotts',
+      'Elected to the Georgia House of Representatives in 1965 but was barred from his seat due to his outspoken opposition to the Vietnam War; won the right to serve through a 1967 U.S. Supreme Court ruling',
+      'Served in both the Georgia House and Senate',
+      'First president of the Southern Poverty Law Center; also served as president of the Atlanta NAACP chapter and later as chairman of the national NAACP'
+    ],
+    audio: null
+  },
+  john_lewis: {
+    name:  'Congressman John Lewis',
+    dates: '1940 – 2020',
+    photo: null,
+    facts: [
+      'Served in the U.S. House of Representatives for Georgia\'s 5th congressional district from 1987 until his death in 2020',
+      'Participated in the 1960 Nashville sit-ins and the Freedom Rides',
+      'Served as chairman of the Student Nonviolent Coordinating Committee (SNCC) from 1963 to 1966',
+      'One of the "Big Six" organizers of the 1963 March on Washington',
+      'Widely regarded as the conscience of the U.S. Congress and a tireless champion of voting rights and nonviolent protest'
     ],
     audio: null
   }
@@ -72,39 +188,99 @@ const timelineInfo = {
     body:  'Six Black Atlanta businessmen — barred from burying their dead in white-only Westview Cemetery — pooled their resources and purchased land south of the city. On December 6, 1886, South-View Cemetery opened its gates, giving Atlanta\'s Black community a place of dignity and rest.',
     scene: 's01'
   },
+  1894: {
+    title: 'Rev. A. D. Williams Leads Ebenezer',
+    body:  'Adam Daniel Williams became pastor of Ebenezer Baptist Church in 1894, growing its congregation from just a handful of members to more than 750. He built Ebenezer into a center of political and community life, co-founded the Atlanta NAACP in 1917, and served as its first president. His daughter Alberta was the mother of Dr. Martin Luther King Jr. Rev. Williams and his wife Jennie are buried here at South-View.',
+    scene: 's16'
+  },
+  1904: {
+    title: 'Adrienne Herndon Makes Her Stage Debut',
+    body:  'In 1904, Adrienne McNeil Herndon made her professional acting debut in Boston under the stage name Anne Du Bignon — one of the first African American women to pursue a professional stage career. A professor at Atlanta University, she taught elocution and staged Shakespearean productions. She later graduated from the School of Dramatic Arts in New York City (1908) and designed the Herndon family mansion, Diamond Hill. She is buried here at South-View.',
+    scene: 's12'
+  },
   1905: {
     title: 'Herndon Builds an Empire',
-    body:  'Alonzo Herndon, born enslaved in 1858, founded the Atlanta Mutual Insurance Association in 1905. By his death in 1927 it had grown into Atlanta Life Insurance Company — the largest Black-owned stock insurance firm in America. He is buried in the Historic Section of this cemetery.',
-    scene: 's05'
+    body:  'Alonzo Herndon, born enslaved in 1858, founded the Atlanta Mutual Insurance Association in 1905. By his death in 1927 it had grown into Atlanta Life Insurance Company — the largest Black-owned stock insurance firm in America. He is buried here at South-View.',
+    scene: 's13'
+  },
+  1906: {
+    title: 'Atlanta Race Massacre',
+    body:  'On September 22–24, 1906, white mobs tore through Atlanta\'s Black neighborhoods, killing residents, burning businesses, and attacking anyone in their path. Union Army veteran George "Union" Wilder, buried here at South-View, was killed defending his home in Brownsville with a muzzle-loaded musket. His stand is credited with helping slow the rioters. At least 12 Black Atlantans were killed.',
+    scene: 's15'
+  },
+  1911: {
+    title: 'Moses Amos — First Licensed Black Pharmacist in Georgia',
+    body:  'In June 1911, Moses Amos passed the Georgia State pharmacy exam and became the first African American granted a druggist license by the Georgia State Board of Pharmacy. He went on to open the Gate City Drug Store on Auburn Avenue — hiring the first African American woman to work in a public place in Atlanta and mentoring nine young Black men who became professionals in pharmacy, medicine, and dentistry. He is buried here at South-View.',
+    scene: 's07'
   },
   1927: {
     title: 'Herndon Passes',
     body:  'Alonzo Herndon died on July 21, 1927, at age 69, having turned a $1.25 shoeshine cloth into a financial empire. His funeral drew thousands. The company he built survived the Depression, segregation, and decades of legal battles, and still operates from Atlanta today.',
-    scene: 's05'
+    scene: 's13'
+  },
+  1944: {
+    title: 'Tuskegee Airman Shot Down',
+    body:  'On October 13, 1944, First Lieutenant Walter Westmoreland — a Morehouse College graduate and member of the 332nd Fighter Squadron — was shot down while returning from an escort mission to Blechhammer, Germany. He and his fellow "Red Tail Flyers" proved that Black pilots could fly and fight with excellence in the face of a segregated military and a skeptical nation.',
+    scene: 's11'
+  },
+  1948: {
+    title: 'John Wesley Dobbs Desegregates Atlanta\'s Police',
+    body:  'Through the Atlanta Civic and Political League and years of voter-registration work, John Wesley Dobbs helped win a historic breakthrough in 1948: eight Black officers joined the Atlanta Police Department. They were required to use the Butler Street YMCA as their precinct, could not wear uniforms to and from work, and were only permitted to patrol Black neighborhoods on foot — but the door had been opened. "The Mayor of Auburn Avenue" is buried here at South-View.',
+    scene: 's02'
+  },
+  1950: {
+    title: 'Carrie Steele Pitts Home — Named in Her Honor',
+    body:  'In 1950, the Carrie Steele Orphans Home was renamed the Carrie Steele Pitts Home in recognition of superintendent Clara Maxwell Cater Pitts, who had modernized the facility, secured United Way funding, and relocated the home to Roy Street in southwest Atlanta. An Atlanta Public School also bears her name. She is buried here at South-View.',
+    scene: 's04'
   },
   1961: {
-    title: 'John Wesley Dobbs Passes',
-    body:  'John Wesley Dobbs — "The Mayor of Auburn Avenue" — died on August 29, 1961, the same day W.E.B. Du Bois passed away in Ghana. Dobbs had registered more Black voters than anyone in Georgia history, and his daughter Mattiwilda was the first Black singer to star at Milan\'s La Scala opera house.',
-    scene: 's09'
+    title: 'South-View\'s 75th Anniversary & The Angel Monument',
+    body:  'In 1961, on the 75th anniversary of its founding, South-View dedicated the Angel monument. The front lists the names of the six founders — all born enslaved — who chartered the cemetery in 1886. The back is a who\'s who of Black Atlanta, representing a community that had built institutions, registered voters, and shaped a city from freedom\'s first generation. South-View has never been segregated — over 90,000 souls of all races and faiths rest on these grounds.',
+    scene: 's02'
+  },
+  1963: {
+    title: 'March on Washington',
+    body:  'On August 28, 1963, more than 250,000 people gathered at the Lincoln Memorial. John Lewis — then chairman of SNCC and one of the "Big Six" organizers — delivered one of the day\'s most passionate speeches. Julian Bond, also organizing through SNCC, helped mobilize a generation of student activists. Both men are buried here at South-View.',
+    scene: 's30'
+  },
+  1974: {
+    title: 'Henry Aaron Breaks the Record',
+    body:  'On April 8, 1974, Hank Aaron hit his 715th career home run, surpassing Babe Ruth\'s long-standing record despite years of racial hatred, death threats, and hate mail. Aaron used his Hall of Fame career as a platform for civil rights, served on the NAACP board, and received the Presidential Medal of Freedom. He rests here at South-View.',
+    scene: 's27'
   },
   1984: {
     title: 'Rev. Martin Luther King Sr. Passes',
     body:  '"Daddy King" died November 11, 1984, having outlived his son Martin Jr. (assassinated, 1968) and his wife Alberta (shot at the church organ, 1974). He devoted his final years to forgiveness and reconciliation. He rests here with Alberta in the King Family Mausoleum.',
-    scene: 's11'
+    scene: 's26'
+  },
+  2015: {
+    title: 'Julian Bond Passes',
+    body:  'Julian Bond — Civil Rights leader, SNCC co-founder, Georgia legislator, and longtime chairman of the NAACP — died on August 15, 2015. His activism began as a Morehouse student, and he spent his life organizing, litigating, and legislating for equality. He is buried here at South-View.',
+    scene: 's30'
+  },
+  2018: {
+    title: 'Bench by the Road — 50 Years After Dr. King',
+    body:  'In 2018, on the 50th anniversary of the burial of Dr. Martin Luther King Jr. at South-View, the Toni Morrison Society installed a Bench by the Road plaque here to honor his legacy of nonviolence in the pursuit of social justice. The project recognizes South-View as a site of dignity and equality for African Americans for more than a century.',
+    scene: 's32'
+  },
+  2020: {
+    title: 'Congressman John Lewis Passes',
+    body:  'John Lewis — congressman, Freedom Rider, SNCC chairman, and one of the "Big Six" organizers of the 1963 March on Washington — died on July 17, 2020. He served Georgia\'s 5th congressional district for 33 years and was widely regarded as the conscience of the U.S. Congress. He is buried here at South-View.',
+    scene: 's23'
   },
   2021: {
     title: 'Juneteenth Becomes a Federal Holiday',
     body:  'On June 17, 2021, President Biden signed legislation making June 19th a federal holiday — the first new federal holiday since Martin Luther King Jr. Day in 1983. South-View Cemetery, founded by those who built Atlanta\'s Black professional class from freedom\'s first generation, stands as living testimony.',
-    scene: 's12'
+    scene: 's01'
   }
 };
 
 /* ================================================================
-   SCENE DEFINITIONS — 12 curated stops
+   SCENE DEFINITIONS — 32 stops, one per image in sequential order
    NO in-panorama navigation hotspots — controlled by fixed HTML buttons
    ================================================================ */
 const sceneDefs = [
-  {
+  /* 01 */ {
     id: 's01', title: 'Cemetery Entrance',
     file: 'scene_01.jpg', initialYaw: -10, initialPitch: -5, initialHfov: 110,
     extra: [
@@ -118,16 +294,43 @@ const sceneDefs = [
       }
     ]
   },
-  {
-    id: 's02', title: 'Main Drive',
-    file: 'scene_03.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110
+  /* 02 */ {
+    id: 's02', title: 'The Angel Monument',
+    file: 'scene_02.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110,
+    extra: [
+      {
+        type: 'info', pitch: -8, yaw: -15, cssClass: 'hs-info',
+        createTooltipFunc: createInfoTooltip,
+        createTooltipArgs: {
+          heading: 'The Angel — Dedicated 1961',
+          body: 'Dedicated in 1961 at South-View\'s 75th anniversary, this monument\'s front lists the six founders — all born enslaved — who chartered the cemetery in 1886. The back is a who\'s who of Black Atlanta. South-View has never been segregated; people of all races and religions rest on these grounds. Over 90,000 souls are currently buried here.'
+        }
+      },
+      {
+        type: 'info', pitch: -8, yaw: 15, cssClass: 'hs-person',
+        createTooltipFunc: createPersonTooltip,
+        createTooltipArgs: 'dobbs'
+      }
+    ]
   },
-  {
-    id: 's03', title: 'Cedar Grove',
+  /* 03 */ { id: 's03', title: 'Main Drive',           file: 'scene_03.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110 },
+  /* 04 */ {
+    id: 's04', title: 'Clara Maxwell Cater Pitts',
+    file: 'scene_04.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110,
+    extra: [
+      {
+        type: 'info', pitch: -8, yaw: 0, cssClass: 'hs-person',
+        createTooltipFunc: createPersonTooltip,
+        createTooltipArgs: 'pitts'
+      }
+    ]
+  },
+  /* 05 */ {
+    id: 's05', title: 'Cedar Grove',
     file: 'scene_05.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110,
     extra: [
       {
-        type: 'info', pitch: -8, yaw: 45, cssClass: 'hs-info',
+        type: 'info', pitch: -8, yaw: 0, cssClass: 'hs-info',
         createTooltipFunc: createInfoTooltip,
         createTooltipArgs: {
           heading: 'Cedar Grove',
@@ -136,12 +339,39 @@ const sceneDefs = [
       }
     ]
   },
-  {
-    id: 's04', title: 'Magnolia Walk',
+  /* 06 */ { id: 's06', title: 'North Walk',          file: 'scene_06.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110 },
+  /* 07 */ {
+    id: 's07', title: 'Moses Amos',
+    file: 'scene_07.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110,
+    extra: [
+      {
+        type: 'info', pitch: -8, yaw: 0, cssClass: 'hs-person',
+        createTooltipFunc: createPersonTooltip,
+        createTooltipArgs: 'amos'
+      }
+    ]
+  },
+  /* 08 */ {
+    id: 's08', title: 'Oak Alley',
+    file: 'scene_08.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110
+  },
+  /* 09 */ {
+    id: 's09', title: 'Dinah Watts Pace',
+    file: 'scene_09.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110,
+    extra: [
+      {
+        type: 'info', pitch: -8, yaw: 0, cssClass: 'hs-person',
+        createTooltipFunc: createPersonTooltip,
+        createTooltipArgs: 'pace'
+      }
+    ]
+  },
+  /* 10 */ {
+    id: 's10', title: 'Magnolia Walk',
     file: 'scene_10.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110,
     extra: [
       {
-        type: 'info', pitch: -8, yaw: -15, cssClass: 'hs-info',
+        type: 'info', pitch: -8, yaw: 0, cssClass: 'hs-info',
         createTooltipFunc: createInfoTooltip,
         createTooltipArgs: {
           heading: 'Magnolia Walk',
@@ -150,8 +380,30 @@ const sceneDefs = [
       }
     ]
   },
-  {
-    id: 's05', title: 'Historic Section',
+  /* 11 */ {
+    id: 's11', title: 'Walter Westmoreland',
+    file: 'scene_11.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110,
+    extra: [
+      {
+        type: 'info', pitch: -8, yaw: 0, cssClass: 'hs-person',
+        createTooltipFunc: createPersonTooltip,
+        createTooltipArgs: 'westmoreland'
+      }
+    ]
+  },
+  /* 12 */ {
+    id: 's12', title: 'Adrienne Herndon',
+    file: 'scene_12.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110,
+    extra: [
+      {
+        type: 'info', pitch: -30, yaw: 0, cssClass: 'hs-person',
+        createTooltipFunc: createPersonTooltip,
+        createTooltipArgs: 'adrienne_herndon'
+      }
+    ]
+  },
+  /* 13 */ {
+    id: 's13', title: 'Alonzo Herndon',
     file: 'scene_13.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110,
     extra: [
       {
@@ -161,23 +413,37 @@ const sceneDefs = [
       }
     ]
   },
-  {
-    id: 's06', title: 'Williams Plot',
+  /* 14 */ { id: 's14', title: 'Heritage Walk',        file: 'scene_14.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110 },
+  /* 15 */ {
+    id: 's15', title: 'George "Union" Wilder',
+    file: 'scene_15.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110,
+    extra: [
+      {
+        type: 'info', pitch: -8, yaw: 0, cssClass: 'hs-person',
+        createTooltipFunc: createPersonTooltip,
+        createTooltipArgs: 'wilder'
+      }
+    ]
+  },
+  /* 16 */ {
+    id: 's16', title: 'Williams Plot',
     file: 'scene_16.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110,
     extra: [
       {
-        type: 'info', pitch: -8, yaw: 10, cssClass: 'hs-person',
+        type: 'info', pitch: -8, yaw: 0, cssClass: 'hs-person',
         createTooltipFunc: createPersonTooltip,
         createTooltipArgs: 'williams_ad'
       }
     ]
   },
-  {
-    id: 's07', title: 'Interior Gardens',
+  /* 17 */ { id: 's17', title: 'Garden View',          file: 'scene_17.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110 },
+  /* 18 */ { id: 's18', title: 'Reflections Path',    file: 'scene_18.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110 },
+  /* 19 */ {
+    id: 's19', title: 'Interior Gardens',
     file: 'scene_19.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110,
     extra: [
       {
-        type: 'info', pitch: -8, yaw: -5, cssClass: 'hs-info',
+        type: 'info', pitch: -8, yaw: 0, cssClass: 'hs-info',
         createTooltipFunc: createInfoTooltip,
         createTooltipArgs: {
           heading: 'The Long Path',
@@ -186,8 +452,13 @@ const sceneDefs = [
       }
     ]
   },
-  {
-    id: 's08', title: 'Memorial Overlook',
+  /* 20 */ {
+    id: 's20', title: 'West Walk',
+    file: 'scene_20.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110
+  },
+  /* 21 */ { id: 's21', title: 'Shaded Grounds',      file: 'scene_21.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110 },
+  /* 22 */ {
+    id: 's22', title: 'Memorial Overlook',
     file: 'scene_22.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110,
     extra: [
       {
@@ -200,19 +471,43 @@ const sceneDefs = [
       }
     ]
   },
-  {
-    id: 's09', title: 'Hilltop Memorial',
-    file: 'scene_25.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110,
+  /* 23 */ {
+    id: 's23', title: 'Congressman John Lewis',
+    file: 'scene_23.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110,
     extra: [
       {
-        type: 'info', pitch: -16.2, yaw: 0, cssClass: 'hs-person',
+        type: 'info', pitch: -8, yaw: 0, cssClass: 'hs-person',
         createTooltipFunc: createPersonTooltip,
-        createTooltipArgs: 'dobbs'
+        createTooltipArgs: 'john_lewis'
       }
     ]
   },
-  {
-    id: 's10', title: 'Chapel View',
+  /* 24 */ { id: 's24', title: 'Heritage Section',    file: 'scene_24.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110 },
+  /* 25 */ { id: 's25', title: 'Hilltop Memorial',     file: 'scene_25.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110 },
+  /* 26 */ {
+    id: 's26', title: 'King Family Mausoleum',
+    file: 'scene_26.jpg', initialYaw: -30, initialPitch: -5, initialHfov: 110,
+    extra: [
+      {
+        type: 'info', pitch: -8, yaw: -30, cssClass: 'hs-person',
+        createTooltipFunc: createPersonTooltip,
+        createTooltipArgs: 'king_sr'
+      }
+    ]
+  },
+  /* 27 */ {
+    id: 's27', title: 'Henry Aaron',
+    file: 'scene_27.jpg', initialYaw: -30, initialPitch: -5, initialHfov: 110,
+    extra: [
+      {
+        type: 'info', pitch: -8, yaw: -30, cssClass: 'hs-person',
+        createTooltipFunc: createPersonTooltip,
+        createTooltipArgs: 'henry_aaron'
+      }
+    ]
+  },
+  /* 28 */ {
+    id: 's28', title: 'Chapel View',
     file: 'scene_28.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110,
     extra: [
       {
@@ -225,27 +520,29 @@ const sceneDefs = [
       }
     ]
   },
-  {
-    id: 's11', title: 'King Family Mausoleum',
-    file: 'king_memorial.jpg', initialYaw: 106, initialPitch: -10, initialHfov: 100,
+  /* 29 */ { id: 's29', title: 'Chapel Grounds',       file: 'scene_29.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110 },
+  /* 30 */ {
+    id: 's30', title: 'Julian Bond',
+    file: 'scene_31.jpg', initialYaw: 180, initialPitch: -5, initialHfov: 110,
     extra: [
       {
-        type: 'info', pitch: -13.5, yaw: 106, cssClass: 'hs-person',
+        type: 'info', pitch: -8, yaw: 180, cssClass: 'hs-person',
         createTooltipFunc: createPersonTooltip,
-        createTooltipArgs: 'king_sr'
+        createTooltipArgs: 'julian_bond'
       }
     ]
   },
-  {
-    id: 's12', title: 'Juneteenth Marker',
-    file: 'scene_32.jpg', initialYaw: -163, initialPitch: -5, initialHfov: 110,
+  /* 31 */ { id: 's31', title: 'Final Rest',           file: 'scene_30.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110 },
+  /* 32 */ {
+    id: 's32', title: 'Bench by the Road',
+    file: 'scene_32.jpg', initialYaw: 135, initialPitch: -5, initialHfov: 110,
     extra: [
       {
-        type: 'info', pitch: 0, yaw: -163, cssClass: 'hs-info',
+        type: 'info', pitch: -10, yaw: 135, cssClass: 'hs-info',
         createTooltipFunc: createInfoTooltip,
         createTooltipArgs: {
-          heading: 'June 19, 1865',
-          body: 'On this date, enslaved people in Texas first heard they were free — two and a half years after the Emancipation Proclamation. South-View Cemetery, founded 21 years later by those who lived freedom\'s first generation, stands as testament to everything that generation built. Juneteenth became a federal holiday in 2021.'
+          heading: 'Bench by the Side of the Road',
+          body: 'Installed in 2018 on the 50th anniversary of Dr. King\'s burial, this bench and plaque are part of the Toni Morrison Society\'s memorial history initiative. It honors Dr. King\'s legacy of nonviolent pursuit of social justice and recognizes South-View as a site of dignity and equality for African Americans for more than 100 years.'
         }
       }
     ]
