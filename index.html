@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>South-View Cemetery — Digital Tour</title>
+    <title>South-View Cemetery — Juneteenth Heritage Tour</title>
 
     <!-- Pannellum -->
     <link rel="stylesheet" href="https://cdn.pannellum.org/2.5/pannellum.css">
@@ -13,148 +13,229 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/tour.css">
+    <link rel="stylesheet" href="css/tour.css?v=3">
 </head>
 <body>
 
-    <!-- ==================== LOADING SCREEN ==================== -->
-    <div id="loading-screen">
-        <div class="loader-content">
-            <div class="loader-icon">
-                <svg viewBox="0 0 100 100" width="80" height="80">
-                    <circle cx="50" cy="50" r="45" fill="none" stroke="rgba(212,175,55,0.15)" stroke-width="1"/>
-                    <circle cx="50" cy="50" r="35" fill="none" stroke="rgba(212,175,55,0.2)" stroke-width="0.5"/>
-                    <circle cx="50" cy="50" r="45" fill="none" stroke="#d4af37" stroke-width="1.5"
-                        stroke-dasharray="283" stroke-dashoffset="283" class="spinner"/>
-                    <text x="50" y="48" text-anchor="middle" fill="#d4af37"
-                        font-family="Cinzel" font-size="8" letter-spacing="3">SOUTH-VIEW</text>
-                    <text x="50" y="60" text-anchor="middle" fill="rgba(212,175,55,0.6)"
-                        font-family="Cormorant Garamond" font-size="6" letter-spacing="1.5">CEMETERY</text>
-                </svg>
-            </div>
-            <h1 class="loader-title">South-View Cemetery</h1>
-            <p class="loader-subtitle">Digital Heritage Tour</p>
-            <div class="loader-bar">
-                <div class="loader-bar-fill"></div>
-            </div>
-            <p class="loader-hint">Est. 1886 · Atlanta, Georgia</p>
+<!-- ==================== LOADING SCREEN ==================== -->
+<div id="loading-screen">
+    <div class="loader-content">
+        <div class="loader-icon">
+            <svg viewBox="0 0 100 100" width="80" height="80">
+                <circle cx="50" cy="50" r="45" fill="none" stroke="rgba(212,175,55,0.15)" stroke-width="1"/>
+                <circle cx="50" cy="50" r="35" fill="none" stroke="rgba(212,175,55,0.2)" stroke-width="0.5"/>
+                <circle cx="50" cy="50" r="45" fill="none" stroke="#d4af37" stroke-width="1.5"
+                    stroke-dasharray="283" stroke-dashoffset="283" class="spinner"/>
+                <text x="50" y="48" text-anchor="middle" fill="#d4af37"
+                    font-family="Cinzel" font-size="8" letter-spacing="3">SOUTH-VIEW</text>
+                <text x="50" y="60" text-anchor="middle" fill="rgba(212,175,55,0.6)"
+                    font-family="Cormorant Garamond" font-size="6" letter-spacing="1.5">CEMETERY</text>
+            </svg>
         </div>
+        <h1 class="loader-title">South-View Cemetery</h1>
+        <p class="loader-subtitle">Juneteenth Heritage Tour</p>
+        <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+        <p class="loader-hint">Est. 1886 · Atlanta, Georgia · Juneteenth 1865</p>
     </div>
+</div>
 
-    <!-- ==================== MAIN TOUR ==================== -->
-    <div id="tour-wrapper" class="hidden">
+<!-- ==================== MAIN TOUR ==================== -->
+<div id="tour-wrapper" class="hidden">
 
-        <!-- Header -->
-        <header id="tour-header">
-            <div class="header-inner">
-                <div class="header-brand">
-                    <span class="brand-mark">SV</span>
-                    <div>
-                        <h1>South-View Cemetery</h1>
-                        <p class="header-tagline">Digital Heritage Tour</p>
-                    </div>
+    <!-- Header -->
+    <header id="tour-header">
+        <div class="header-inner">
+            <div class="header-brand">
+                <span class="brand-mark">SV</span>
+                <div>
+                    <h1>South-View Cemetery</h1>
+                    <p class="header-tagline">Juneteenth Heritage Tour</p>
                 </div>
+            </div>
+            <div class="header-center">
                 <div class="header-scene-name" id="current-scene-label">Cemetery Entrance</div>
+                <div class="header-counter" id="scene-counter">1 of 12</div>
             </div>
-        </header>
-
-        <!-- Panorama Viewer -->
-        <div id="panorama"></div>
-
-        <!-- Mini-map -->
-        <div id="minimap">
-            <div class="minimap-inner">
-                <svg viewBox="0 0 200 160" width="200" height="160">
-                    <!-- Cemetery outline -->
-                    <rect x="10" y="10" width="180" height="140" rx="8"
-                        fill="none" stroke="rgba(212,175,55,0.2)" stroke-width="1"/>
-                    <!-- Path line connecting all scenes -->
-                    <polyline points="30,30 60,55 90,80 120,95 155,110 175,130"
-                        fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1" stroke-dasharray="4"/>
-                    <!-- Location dots -->
-                    <circle cx="30"  cy="30"  r="6" class="map-dot" data-scene="entrance"/>
-                    <circle cx="60"  cy="55"  r="6" class="map-dot" data-scene="main_path"/>
-                    <circle cx="90"  cy="80"  r="6" class="map-dot" data-scene="historic_section"/>
-                    <circle cx="120" cy="95"  r="6" class="map-dot" data-scene="ancient_area"/>
-                    <circle cx="155" cy="110" r="6" class="map-dot" data-scene="monument_row"/>
-                    <circle cx="175" cy="130" r="6" class="map-dot" data-scene="king_memorial"/>
-                    <!-- Labels -->
-                    <text x="30"  y="46"  text-anchor="middle" fill="rgba(255,255,255,0.5)"
-                        font-family="Cormorant Garamond" font-size="7">Entrance</text>
-                    <text x="60"  y="71"  text-anchor="middle" fill="rgba(255,255,255,0.5)"
-                        font-family="Cormorant Garamond" font-size="7">Path</text>
-                    <text x="90"  y="96"  text-anchor="middle" fill="rgba(255,255,255,0.5)"
-                        font-family="Cormorant Garamond" font-size="7">Historic</text>
-                    <text x="118" y="110" text-anchor="middle" fill="rgba(255,255,255,0.5)"
-                        font-family="Cormorant Garamond" font-size="7">Older</text>
-                    <text x="155" y="126" text-anchor="middle" fill="rgba(255,255,255,0.5)"
-                        font-family="Cormorant Garamond" font-size="7">Monuments</text>
-                    <text x="175" y="146" text-anchor="middle" fill="rgba(255,255,255,0.5)"
-                        font-family="Cormorant Garamond" font-size="7">King</text>
-                </svg>
-            </div>
-            <div class="minimap-label">MAP</div>
         </div>
+    </header>
 
-        <!-- Timeline -->
-        <div id="timeline">
-            <div class="timeline-track">
-                <div class="timeline-marker" data-year="1886" style="left: 0%">
-                    <span class="timeline-dot"></span>
-                    <span class="timeline-year">1886</span>
-                    <span class="timeline-event">Cemetery Founded</span>
-                </div>
-                <div class="timeline-marker" data-year="1899" style="left: 13%">
-                    <span class="timeline-dot"></span>
-                    <span class="timeline-year">1899</span>
-                    <span class="timeline-event">MLK Sr. Born</span>
-                </div>
-                <div class="timeline-marker" data-year="1905" style="left: 19%">
-                    <span class="timeline-dot"></span>
-                    <span class="timeline-year">1905</span>
-                    <span class="timeline-event">Herndon Founds Atlanta Life</span>
-                </div>
-                <div class="timeline-marker" data-year="1927" style="left: 42%">
-                    <span class="timeline-dot"></span>
-                    <span class="timeline-year">1927</span>
-                    <span class="timeline-event">Herndon Passes</span>
-                </div>
-                <div class="timeline-marker" data-year="1961" style="left: 76%">
-                    <span class="timeline-dot"></span>
-                    <span class="timeline-year">1961</span>
-                    <span class="timeline-event">Dobbs Passes</span>
-                </div>
-                <div class="timeline-marker" data-year="1984" style="left: 100%">
-                    <span class="timeline-dot"></span>
-                    <span class="timeline-year">1984</span>
-                    <span class="timeline-event">MLK Sr. Passes</span>
-                </div>
+    <!-- Panorama Viewer -->
+    <div id="panorama"></div>
+
+    <!-- ===== RIGHT PANEL: Legend + Nav ===== -->
+    <div id="right-panel">
+
+        <!-- Hotspot Legend -->
+        <div id="hotspot-legend">
+            <div class="legend-title">LEGEND</div>
+            <div class="legend-item">
+                <span class="legend-dot legend-info"></span>
+                <span class="legend-text">Information</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-dot legend-person"></span>
+                <span class="legend-text">Notable Person</span>
             </div>
         </div>
 
-        <!-- Person Overlay -->
-        <div id="person-overlay" class="overlay hidden">
-            <div class="glass-card">
-                <button class="close-btn" aria-label="Close">&times;</button>
-                <div class="card-portrait">
-                    <img id="person-photo" src="" alt="">
-                </div>
-                <div class="card-info">
-                    <h2 id="person-name"></h2>
-                    <p class="dates" id="person-dates"></p>
-                    <div class="facts" id="person-facts"></div>
-                </div>
-                <button class="narration-btn" id="narration-btn" aria-label="Play narration">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+        <!-- Fixed Navigation Panel -->
+        <div id="nav-panel">
+            <!-- Back -->
+            <div class="nav-slot nav-slot-back">
+                <button id="btn-back" class="nav-btn nav-btn-back" aria-label="Previous stop">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
                     </svg>
-                    <span>Listen</span>
+                    <span>Previous</span>
                 </button>
+                <div class="nav-dest nav-dest-back" id="nav-label-back">Start of tour</div>
+            </div>
+
+            <!-- Divider -->
+            <div class="nav-divider"></div>
+
+            <!-- Forward -->
+            <div class="nav-slot nav-slot-fwd">
+                <button id="btn-forward" class="nav-btn nav-btn-fwd" aria-label="Next stop">
+                    <span>Next</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                    </svg>
+                </button>
+                <div class="nav-dest nav-dest-fwd" id="nav-label-fwd">Main Drive</div>
             </div>
         </div>
 
+    </div><!-- /right-panel -->
+
+    <!-- Mini-map: 12-scene winding path -->
+    <div id="minimap">
+        <div class="minimap-inner">
+            <svg viewBox="0 0 210 170" width="210" height="170">
+                <!-- Cemetery boundary -->
+                <rect x="8" y="8" width="194" height="154" rx="8"
+                    fill="none" stroke="rgba(212,175,55,0.15)" stroke-width="1"/>
+
+                <!-- Path line through 12 scenes -->
+                <polyline
+                    points="22,22 46,30 68,40 80,58 80,82 76,106 85,120 108,122 128,112 154,108 172,120 188,147"
+                    fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" stroke-dasharray="3 2"/>
+
+                <!-- Section labels -->
+                <text x="30" y="16" text-anchor="middle" fill="rgba(212,175,55,0.55)"
+                    font-family="Cormorant Garamond" font-size="6">Entrance</text>
+                <text x="62" y="58" text-anchor="end" fill="rgba(255,255,255,0.35)"
+                    font-family="Cormorant Garamond" font-size="6">Historic</text>
+                <text x="145" y="100" text-anchor="middle" fill="rgba(255,255,255,0.35)"
+                    font-family="Cormorant Garamond" font-size="6">Memorial</text>
+                <text x="188" y="158" text-anchor="middle" fill="rgba(212,175,55,0.55)"
+                    font-family="Cormorant Garamond" font-size="6">End</text>
+
+                <!-- 12 scene dots -->
+                <circle cx="22"  cy="22"  r="4" class="map-dot" data-scene="s01"/>
+                <circle cx="46"  cy="30"  r="4" class="map-dot" data-scene="s02"/>
+                <circle cx="68"  cy="40"  r="4" class="map-dot" data-scene="s03"/>
+                <circle cx="80"  cy="58"  r="4" class="map-dot" data-scene="s04"/>
+                <circle cx="80"  cy="82"  r="4" class="map-dot" data-scene="s05"/>
+                <circle cx="76"  cy="106" r="4" class="map-dot" data-scene="s06"/>
+                <circle cx="85"  cy="120" r="4" class="map-dot" data-scene="s07"/>
+                <circle cx="108" cy="122" r="4" class="map-dot" data-scene="s08"/>
+                <circle cx="128" cy="112" r="4" class="map-dot" data-scene="s09"/>
+                <circle cx="154" cy="108" r="4" class="map-dot" data-scene="s10"/>
+                <circle cx="172" cy="120" r="4" class="map-dot" data-scene="s11"/>
+                <circle cx="188" cy="147" r="4" class="map-dot" data-scene="s12"/>
+            </svg>
+        </div>
+        <div class="minimap-label">JUNETEENTH PATH · 12 STOPS</div>
     </div>
 
-    <script src="js/tour.js"></script>
+    <!-- Timeline -->
+    <div id="timeline">
+        <div class="timeline-track">
+            <div class="timeline-marker" data-year="1865" data-scene="s01" style="left:0%">
+                <span class="timeline-dot"></span>
+                <span class="timeline-year">1865</span>
+                <span class="timeline-event">Juneteenth</span>
+            </div>
+            <div class="timeline-marker" data-year="1886" data-scene="s01" style="left:13.5%">
+                <span class="timeline-dot"></span>
+                <span class="timeline-year">1886</span>
+                <span class="timeline-event">Cemetery Founded</span>
+            </div>
+            <div class="timeline-marker" data-year="1905" data-scene="s05" style="left:25.6%">
+                <span class="timeline-dot"></span>
+                <span class="timeline-year">1905</span>
+                <span class="timeline-event">Herndon's Vision</span>
+            </div>
+            <div class="timeline-marker" data-year="1927" data-scene="s05" style="left:39.7%">
+                <span class="timeline-dot"></span>
+                <span class="timeline-year">1927</span>
+                <span class="timeline-event">Herndon Passes</span>
+            </div>
+            <div class="timeline-marker" data-year="1961" data-scene="s09" style="left:61.5%">
+                <span class="timeline-dot"></span>
+                <span class="timeline-year">1961</span>
+                <span class="timeline-event">Dobbs Passes</span>
+            </div>
+            <div class="timeline-marker" data-year="1984" data-scene="s11" style="left:76.3%">
+                <span class="timeline-dot"></span>
+                <span class="timeline-year">1984</span>
+                <span class="timeline-event">MLK Sr. Passes</span>
+            </div>
+            <div class="timeline-marker" data-year="2021" data-scene="s12" style="left:100%">
+                <span class="timeline-dot"></span>
+                <span class="timeline-year">2021</span>
+                <span class="timeline-event">Federal Holiday</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Timeline Info Popup -->
+    <div id="timeline-popup" class="hidden">
+        <button class="timeline-popup-close" id="timeline-popup-close" aria-label="Close">&times;</button>
+        <div class="timeline-popup-year" id="timeline-popup-year"></div>
+        <div class="timeline-popup-title" id="timeline-popup-title"></div>
+        <div class="timeline-popup-body" id="timeline-popup-body"></div>
+        <button class="timeline-popup-nav" id="timeline-popup-nav">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+            <span id="timeline-popup-nav-label">Go to Location</span>
+        </button>
+    </div>
+
+    <!-- Info Overlay (for info hotspot clicks) -->
+    <div id="info-overlay" class="overlay hidden">
+        <div class="glass-card info-card">
+            <button class="close-btn" aria-label="Close">&times;</button>
+            <h2 id="info-heading"></h2>
+            <p id="info-body"></p>
+        </div>
+    </div>
+
+    <!-- Person Overlay -->
+    <div id="person-overlay" class="overlay hidden">
+        <div class="glass-card">
+            <button class="close-btn" aria-label="Close">&times;</button>
+            <div class="card-portrait">
+                <img id="person-photo" src="" alt="">
+            </div>
+            <div class="card-info">
+                <h2 id="person-name"></h2>
+                <p class="dates" id="person-dates"></p>
+                <div class="facts" id="person-facts"></div>
+            </div>
+            <button class="narration-btn" id="narration-btn" aria-label="Play narration">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                </svg>
+                <span>Listen</span>
+            </button>
+        </div>
+    </div>
+
+</div>
+
+<script src="js/tour.js"></script>
 </body>
 </html>
