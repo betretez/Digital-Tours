@@ -263,11 +263,6 @@ const timelineInfo = {
     body:  'In 2018, on the 50th anniversary of the burial of Dr. Martin Luther King Jr. at South-View, the Toni Morrison Society installed a Bench by the Road plaque here to honor his legacy of nonviolence in the pursuit of social justice. The project recognizes South-View as a site of dignity and equality for African Americans for more than a century.',
     scene: 's32'
   },
-  2020: {
-    title: 'Congressman John Lewis Passes',
-    body:  'John Lewis — congressman, Freedom Rider, SNCC chairman, and one of the "Big Six" organizers of the 1963 March on Washington — died on July 17, 2020. He served Georgia\'s 5th congressional district for 33 years and was widely regarded as the conscience of the U.S. Congress. He is buried here at South-View.',
-    scene: 's23'
-  },
   2021: {
     title: 'Juneteenth Becomes a Federal Holiday',
     body:  'On June 17, 2021, President Biden signed legislation making June 19th a federal holiday — the first new federal holiday since Martin Luther King Jr. Day in 1983. South-View Cemetery, founded by those who built Atlanta\'s Black professional class from freedom\'s first generation, stands as living testimony.',
@@ -291,6 +286,14 @@ const sceneDefs = [
           heading: 'Founded 1886',
           body: 'South-View Cemetery opened December 6, 1886, established by six Black businessmen after Westview Cemetery refused to bury their dead. Today it is the oldest Black-owned cemetery still in continuous operation in Atlanta, with over 70,000 burials.'
         }
+      },
+      {
+        type: 'info', pitch: -8, yaw: 10, cssClass: 'hs-info',
+        createTooltipFunc: createInfoTooltip,
+        createTooltipArgs: {
+          heading: 'The Angel — Dedicated 1961',
+          body: 'Dedicated in 1961 at South-View\'s 75th anniversary, this monument\'s front lists the six founders — all born enslaved — who chartered the cemetery in 1886. The back is a who\'s who of Black Atlanta. South-View has never been segregated; people of all races and religions rest on these grounds. Over 90,000 souls are currently buried here.'
+        }
       }
     ]
   },
@@ -299,15 +302,7 @@ const sceneDefs = [
     file: 'scene_02.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110,
     extra: [
       {
-        type: 'info', pitch: -8, yaw: -15, cssClass: 'hs-info',
-        createTooltipFunc: createInfoTooltip,
-        createTooltipArgs: {
-          heading: 'The Angel — Dedicated 1961',
-          body: 'Dedicated in 1961 at South-View\'s 75th anniversary, this monument\'s front lists the six founders — all born enslaved — who chartered the cemetery in 1886. The back is a who\'s who of Black Atlanta. South-View has never been segregated; people of all races and religions rest on these grounds. Over 90,000 souls are currently buried here.'
-        }
-      },
-      {
-        type: 'info', pitch: -8, yaw: 15, cssClass: 'hs-person',
+        type: 'info', pitch: -12, yaw: 0, cssClass: 'hs-person',
         createTooltipFunc: createPersonTooltip,
         createTooltipArgs: 'dobbs'
       }
@@ -315,7 +310,7 @@ const sceneDefs = [
   },
   /* 03 */ { id: 's03', title: 'Main Drive',           file: 'scene_03.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110 },
   /* 04 */ {
-    id: 's04', title: 'Clara Maxwell Cater Pitts',
+    id: 's04', title: 'Entry Path',
     file: 'scene_04.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110,
     extra: [
       {
@@ -385,7 +380,7 @@ const sceneDefs = [
     file: 'scene_11.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110,
     extra: [
       {
-        type: 'info', pitch: -8, yaw: 0, cssClass: 'hs-person',
+        type: 'info', pitch: -28, yaw: 0, cssClass: 'hs-person',
         createTooltipFunc: createPersonTooltip,
         createTooltipArgs: 'westmoreland'
       }
@@ -471,17 +466,7 @@ const sceneDefs = [
       }
     ]
   },
-  /* 23 */ {
-    id: 's23', title: 'Congressman John Lewis',
-    file: 'scene_23.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110,
-    extra: [
-      {
-        type: 'info', pitch: -8, yaw: 0, cssClass: 'hs-person',
-        createTooltipFunc: createPersonTooltip,
-        createTooltipArgs: 'john_lewis'
-      }
-    ]
-  },
+  /* 23 */ { id: 's23', title: 'West Grounds',        file: 'scene_23.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110 },
   /* 24 */ { id: 's24', title: 'Heritage Section',    file: 'scene_24.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110 },
   /* 25 */ { id: 's25', title: 'Hilltop Memorial',     file: 'scene_25.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110 },
   /* 26 */ {
