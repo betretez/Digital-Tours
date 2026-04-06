@@ -8,6 +8,7 @@ const people = {
     name:  'Alonzo Franklin Herndon',
     dates: '1858 – 1927',
     photo: 'images/herndon.jpg',
+    infographic: 'Images_SVC/Screenshot%202026-04-06%20at%2010.00.22%E2%80%AFAM.png',
     facts: [
       'Born enslaved in Social Circle, Georgia',
       'Founded Atlanta Life Insurance Company in 1905 — the largest Black-owned insurance company in the U.S.',
@@ -87,6 +88,7 @@ const people = {
     name:  'Dinah Watts Pace',
     dates: '1833 – 1930',
     photo: null,
+    infographic: 'Images_SVC/Screenshot%202026-04-06%20at%2010.00.42%E2%80%AFAM.png',
     facts: [
       'Born enslaved in Athens, Georgia in 1833; as a teenager started a Sunday School in the Summer Hill neighborhood that grew into the Reed Street Baptist Church (today Paradise Missionary Baptist Church)',
       'Graduated from Atlanta University with a teaching certificate and taught in Covington, Georgia',
@@ -143,6 +145,20 @@ const people = {
       'Awarded the Presidential Medal of Freedom by President George W. Bush for his philanthropy and humanitarian work',
       'Received the Thurgood Marshall Lifetime Achievement Award from the NAACP Legal Defense Fund',
       'Inducted into the International Civil Rights Walk of Fame at the Martin Luther King Jr. National Historic Park'
+    ],
+    audio: null
+  },
+  horace_mann_bond: {
+    name:  'Horace Mann Bond',
+    dates: '1904 – 1972',
+    photo: null,
+    infographic: 'Images_SVC/Screenshot%202026-04-06%20at%2011.17.20%E2%80%AFAM.png',
+    facts: [
+      'One of the first African Americans to earn a PhD in education',
+      'President of Lincoln University and Fort Valley State University',
+      'Dean of the School of Education at Atlanta University',
+      'His research helped support Brown v. Board of Education, overturning "separate but equal"',
+      'Father of civil rights leader and Georgia legislator Julian Bond'
     ],
     audio: null
   },
@@ -514,6 +530,11 @@ const sceneDefs = [
         type: 'info', pitch: -8, yaw: 180, cssClass: 'hs-person',
         createTooltipFunc: createPersonTooltip,
         createTooltipArgs: 'julian_bond'
+      },
+      {
+        type: 'info', pitch: -8, yaw: 195, cssClass: 'hs-person',
+        createTooltipFunc: createPersonTooltip,
+        createTooltipArgs: 'horace_mann_bond'
       }
     ]
   },
@@ -602,9 +623,21 @@ window.addEventListener('DOMContentLoaded', () => {
     ls.style.opacity = '0';
     setTimeout(() => {
       ls.style.display = 'none';
-      document.getElementById('tour-wrapper').classList.remove('hidden');
+      const splash = document.getElementById('splash-screen');
+      splash.classList.remove('hidden');
+      splash.style.animation = 'splashIn 0.7s cubic-bezier(0.16,1,0.3,1) forwards';
     }, 600);
   }, 2000);
+
+  document.getElementById('btn-start-tour').addEventListener('click', () => {
+    const splash = document.getElementById('splash-screen');
+    splash.style.transition = 'opacity 0.5s';
+    splash.style.opacity = '0';
+    setTimeout(() => {
+      splash.style.display = 'none';
+      document.getElementById('tour-wrapper').classList.remove('hidden');
+    }, 500);
+  });
 
   /* —— Pannellum init —— */
   viewer = pannellum.viewer('panorama', buildConfig());
@@ -679,6 +712,14 @@ window.addEventListener('DOMContentLoaded', () => {
     document.getElementById('info-overlay').classList.add('hidden');
   });
 
+  /* —— Image overlay close —— */
+  document.getElementById('image-overlay-close').addEventListener('click', () => {
+    document.getElementById('image-overlay').classList.add('hidden');
+  });
+  document.getElementById('image-overlay').addEventListener('click', e => {
+    if (e.target === e.currentTarget) document.getElementById('image-overlay').classList.add('hidden');
+  });
+
   /* —— Narration button (placeholder) —— */
   document.getElementById('narration-btn').addEventListener('click', () => {
     console.log('Narration requested');
@@ -732,6 +773,12 @@ function updateUI(sceneId) {
 function showPersonCard(personKey) {
   const p = people[personKey];
   if (!p) return;
+
+  if (p.infographic) {
+    document.getElementById('infographic-img').src = p.infographic;
+    document.getElementById('image-overlay').classList.remove('hidden');
+    return;
+  }
 
   const photoEl = document.getElementById('person-photo');
   photoEl.src = p.photo || '';

@@ -82,6 +82,58 @@ html, body {
 .loader-hint { font-size: 0.85rem; color: rgba(212,175,55,0.4); letter-spacing: 2px; }
 
 /* =============================================
+   SPLASH SCREEN
+   ============================================= */
+#splash-screen {
+    position: fixed; inset: 0; z-index: 9998;
+    background: var(--bg-deep);
+    display: flex; align-items: center; justify-content: center;
+}
+
+@keyframes splashIn {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.splash-content {
+    text-align: center;
+    animation: splashIn 0.7s cubic-bezier(0.16,1,0.3,1) forwards;
+    display: flex; flex-direction: column; align-items: center; gap: 0;
+}
+
+.splash-logo { margin-bottom: 28px; }
+
+.splash-title {
+    font-family: var(--font-display);
+    font-size: 2.4rem; font-weight: 400;
+    letter-spacing: 6px; text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.splash-subtitle {
+    font-family: var(--font-body); font-size: 1.1rem; font-weight: 300;
+    color: var(--text-muted); letter-spacing: 3px; margin-bottom: 10px;
+}
+
+.splash-tagline {
+    font-size: 0.85rem; color: rgba(212,175,55,0.45);
+    letter-spacing: 2px; margin-bottom: 48px;
+}
+
+.splash-btn {
+    font-family: var(--font-display);
+    font-size: 0.85rem; letter-spacing: 4px; text-transform: uppercase;
+    color: var(--bg-deep); background: var(--gold);
+    border: none; border-radius: 4px;
+    padding: 14px 48px; cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+}
+.splash-btn:hover {
+    background: #f5e6a3;
+    transform: translateY(-2px);
+}
+
+/* =============================================
    HEADER
    ============================================= */
 #tour-header {
@@ -456,6 +508,32 @@ html, body {
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
 }
+
+/* Infographic image overlay */
+#image-overlay-inner {
+    position: relative;
+    max-width: min(880px, 95vw);
+    max-height: 90vh;
+    animation: cardIn 0.35s cubic-bezier(0.16,1,0.3,1);
+}
+#infographic-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 8px 40px rgba(0,0,0,0.7);
+}
+#image-overlay-inner .close-btn {
+    position: absolute; top: -14px; right: -14px;
+    background: rgba(14,14,18,0.92); border: 1px solid rgba(212,175,55,0.4);
+    color: var(--gold); border-radius: 50%;
+    width: 34px; height: 34px; font-size: 1.3rem;
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    z-index: 10;
+}
+#image-overlay-inner .close-btn:hover { background: rgba(212,175,55,0.15); }
 
 /* Glass card — shared by person + info overlays */
 .glass-card {

@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/tour.css?v=11">
+    <link rel="stylesheet" href="css/tour.css?v=12">
 </head>
 <body>
 
@@ -36,6 +36,26 @@
         <p class="loader-subtitle">Juneteenth Heritage Tour</p>
         <div class="loader-bar"><div class="loader-bar-fill"></div></div>
         <p class="loader-hint">Est. 1886 · Atlanta, Georgia · Juneteenth 1865</p>
+    </div>
+</div>
+
+<!-- ==================== SPLASH SCREEN ==================== -->
+<div id="splash-screen" class="hidden">
+    <div class="splash-content">
+        <svg viewBox="0 0 100 100" width="120" height="120" class="splash-logo">
+            <circle cx="50" cy="50" r="45" fill="none" stroke="rgba(212,175,55,0.2)" stroke-width="1"/>
+            <circle cx="50" cy="50" r="35" fill="none" stroke="rgba(212,175,55,0.12)" stroke-width="0.5"/>
+            <circle cx="50" cy="50" r="45" fill="none" stroke="#d4af37" stroke-width="1.5"
+                stroke-dasharray="283" stroke-dashoffset="0"/>
+            <text x="50" y="48" text-anchor="middle" fill="#d4af37"
+                font-family="Cinzel" font-size="8" letter-spacing="3">SOUTH-VIEW</text>
+            <text x="50" y="60" text-anchor="middle" fill="rgba(212,175,55,0.6)"
+                font-family="Cormorant Garamond" font-size="6" letter-spacing="1.5">CEMETERY</text>
+        </svg>
+        <h1 class="splash-title">South-View Cemetery</h1>
+        <p class="splash-subtitle">Juneteenth Heritage Tour</p>
+        <p class="splash-tagline">Est. 1886 · Atlanta, Georgia · Juneteenth 1865</p>
+        <button id="btn-start-tour" class="splash-btn">Begin Tour</button>
     </div>
 </div>
 
@@ -316,6 +336,14 @@
         </div>
     </div>
 
+    <!-- Infographic Image Overlay -->
+    <div id="image-overlay" class="overlay hidden">
+        <div id="image-overlay-inner">
+            <button class="close-btn" id="image-overlay-close" aria-label="Close">&times;</button>
+            <img id="infographic-img" src="" alt="Infographic" onerror="console.error('Infographic failed to load:', this.src)">
+        </div>
+    </div>
+
     <!-- Person Overlay -->
     <div id="person-overlay" class="overlay hidden">
         <div class="glass-card">
@@ -339,6 +367,6 @@
 
 </div>
 
-<script src="js/tour.js"></script>
+<script src="js/tour.js?v=4"></script>
 </body>
 </html>
