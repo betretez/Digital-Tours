@@ -724,6 +724,13 @@ window.addEventListener('DOMContentLoaded', () => {
   document.getElementById('narration-btn').addEventListener('click', () => {
     console.log('Narration requested');
   });
+
+  document.getElementById('infographic-btn').addEventListener('click', () => {
+    const btn = document.getElementById('infographic-btn');
+    if (!btn.dataset.src) return;
+    document.getElementById('person-overlay').classList.add('hidden');
+    showInfographic(btn.dataset.src);
+  });
 });
 
 /* ================================================================
@@ -774,12 +781,6 @@ function showPersonCard(personKey) {
   const p = people[personKey];
   if (!p) return;
 
-  if (p.infographic) {
-    document.getElementById('infographic-img').src = p.infographic;
-    document.getElementById('image-overlay').classList.remove('hidden');
-    return;
-  }
-
   const photoEl = document.getElementById('person-photo');
   photoEl.src = p.photo || '';
   photoEl.style.display = p.photo ? '' : 'none';
@@ -791,7 +792,16 @@ function showPersonCard(personKey) {
   factsEl.innerHTML = p.facts.map(f => `<p class="fact-item">${f}</p>`).join('');
 
   document.getElementById('narration-btn').style.display = p.audio ? '' : 'none';
+  const infographicBtn = document.getElementById('infographic-btn');
+  infographicBtn.style.display = p.infographic ? '' : 'none';
+  infographicBtn.dataset.src = p.infographic || '';
   document.getElementById('person-overlay').classList.remove('hidden');
+}
+
+function showInfographic(src) {
+  if (!src) return;
+  document.getElementById('infographic-img').src = src;
+  document.getElementById('image-overlay').classList.remove('hidden');
 }
 
 function showInfoCard(heading, body) {

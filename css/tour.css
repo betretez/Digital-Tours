@@ -512,21 +512,26 @@ html, body {
 /* Infographic image overlay */
 #image-overlay-inner {
     position: relative;
-    max-width: min(880px, 95vw);
-    max-height: 90vh;
+    width: 100vw;
+    height: 100vh;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     animation: cardIn 0.35s cubic-bezier(0.16,1,0.3,1);
 }
 #infographic-img {
     display: block;
-    width: 100%;
+    width: auto;
     height: auto;
-    max-height: 90vh;
+    max-width: calc(100vw - 48px);
+    max-height: calc(100vh - 48px);
     object-fit: contain;
     border-radius: var(--radius-lg);
     box-shadow: 0 8px 40px rgba(0,0,0,0.7);
 }
 #image-overlay-inner .close-btn {
-    position: absolute; top: -14px; right: -14px;
+    position: absolute; top: max(12px, env(safe-area-inset-top)); right: max(12px, env(safe-area-inset-right));
     background: rgba(14,14,18,0.92); border: 1px solid rgba(212,175,55,0.4);
     color: var(--gold); border-radius: 50%;
     width: 34px; height: 34px; font-size: 1.3rem;
@@ -618,8 +623,16 @@ html, body {
 }
 .fact-item:hover { border-left-color: var(--gold); }
 
+.card-actions {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
 .narration-btn {
-    margin-top: 20px; display: inline-flex; align-items: center; gap: 8px;
+    display: inline-flex; align-items: center; gap: 8px;
     padding: 8px 20px; background: rgba(212,175,55,0.1);
     border: 1px solid rgba(212,175,55,0.25); border-radius: 30px;
     color: var(--gold); font-family: var(--font-body); font-size: 0.85rem;
