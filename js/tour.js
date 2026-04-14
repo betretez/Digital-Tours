@@ -5,9 +5,7 @@
    ================================================================ */
 const people = {
   herndon: {
-    name:  'Alonzo Franklin Herndon',
-    dates: '1858 – 1927',
-    photo: 'images/herndon.jpg',
+    photo: 'hotspot_images/Alonzo Herndon.jpg',
     infographic: 'Images_SVC/Screenshot%202026-04-06%20at%2010.00.22%E2%80%AFAM.png',
     facts: [
       'Born enslaved in Social Circle, Georgia',
@@ -21,7 +19,7 @@ const people = {
   dobbs: {
     name:  'John Wesley Dobbs & Family',
     dates: '1882 – 1961',
-    photo: 'images/dobbs.jpg',
+    photo: 'hotspot_images/John Wesley Dobbs.jpg',
     facts: [
       'Often called "The Mayor of Auburn Avenue," Dobbs coined the term "Sweet Auburn" for the thriving Black business and civic corridor',
       'Grand Master of Georgia\'s Prince Hall Masons; the broken column on his gravesite signifies he held that office until death',
@@ -35,7 +33,7 @@ const people = {
   king_sr: {
     name:  'Rev. & Mrs. Martin Luther King Sr.',
     dates: '1899 – 1984',
-    photo: 'images/king_sr.jpg',
+    photo: 'hotspot_images/Martin Luther King Sr..jpeg',
     facts: [
       'Pastor of Ebenezer Baptist Church for 44 years; involved in the Atlanta Civic and Political League and the NAACP',
       'Led a voting-rights march on Atlanta City Hall in 1936 and advocated successfully for equalization of teacher pay',
@@ -87,7 +85,7 @@ const people = {
   pace: {
     name:  'Dinah Watts Pace',
     dates: '1833 – 1930',
-    photo: null,
+    photo: 'hotspot_images/Dinah Watts Pace.jpg',
     infographic: 'Images_SVC/Screenshot%202026-04-06%20at%2010.00.42%E2%80%AFAM.png',
     facts: [
       'Born enslaved in Athens, Georgia in 1833; as a teenager started a Sunday School in the Summer Hill neighborhood that grew into the Reed Street Baptist Church (today Paradise Missionary Baptist Church)',
@@ -151,7 +149,7 @@ const people = {
   horace_mann_bond: {
     name:  'Horace Mann Bond',
     dates: '1904 – 1972',
-    photo: null,
+    photo: 'hotspot_images/Horace Mann Bond.jpg',
     infographic: 'Images_SVC/Screenshot%202026-04-06%20at%2011.17.20%E2%80%AFAM.png',
     facts: [
       'One of the first African Americans to earn a PhD in education',
@@ -175,16 +173,186 @@ const people = {
     ],
     audio: null
   },
+  benjamin_mays: {
+    name:  'Benjamin E. Mays',
+    dates: '1894 – 1984',
+    photo: 'hotspot_images/Benjamin E. Mays.webp',
+    facts: [
+      'Transformative president of Morehouse College from 1940 to 1967, shaping it into a premier institution for Black leadership',
+      'Mentor and spiritual father to Dr. Martin Luther King Jr., who called him "the greatest teacher I ever had"',
+      'Served as president of the Atlanta Board of Education from 1969 to 1981, overseeing desegregation and championing equity in public schools',
+      'Author of twelve books and a nationally syndicated newspaper column read by millions',
+      'His wife Sadie Gray Mays was a pioneering social worker and partner in community uplift throughout his career'
+    ],
+    audio: null
+  },
+  robert_grant: {
+    name:  'Robert Grant',
+    dates: null,
+    photo: 'hotspot_images/Robert Grant.avif',
+    facts: [
+      'Skilled blacksmith and drayman in post-Civil War Atlanta, representing the vital role of Black labor in rebuilding the city',
+      'Founded Zion Hill Baptist Church, embodying the intersection of labor and spiritual leadership during Reconstruction',
+      'His life reflects the foundational role of the Black church in fostering community resilience and organizing African American life',
+      'A testament to the first generation of freed people who built lasting institutions from the ground up'
+    ],
+    audio: null
+  },
+  crogman: {
+    name:  'William H. Crogman',
+    photo: 'hotspot_images/William H. Crogman.webp',
+    facts: [
+      'Born in Saint Martin in the Caribbean; came to the United States and became one of the foremost classical scholars of his era',
+      'Served as president of Clark University (now Clark Atlanta University) from 1903 to 1910 — one of the first African Americans to lead an Atlanta University System institution',
+      'Distinguished professor of classical languages and literature, known for rigorous academic standards and deep commitment to character development',
+      'Champion of educational excellence for the Black community during the Reconstruction and Jim Crow eras',
+      'His visionary institutional leadership fostered lasting educational progress and civic growth across the South'
+    ],
+    audio: null
+  },
+  graham_jackson: {
+    name:  'Graham W. Jackson Sr.',
+    dates: '1903 – 1983',
+    photo: 'hotspot_images/Graham W. Jackson Sr..jpg',
+    facts: [
+      'Legendary Atlanta musician whose accordion performance of "Going Home" at President Franklin D. Roosevelt\'s funeral in 1945 became one of the most iconic images of American grief',
+      'Served as a personal friend and musician to President Roosevelt, performing regularly at Warm Springs, Georgia',
+      'Trailblazer in a segregated era, earning national acclaim for his artistic excellence and cultural influence',
+      'His career highlighted the profound impact of Atlanta\'s Black community on American culture and public life',
+      'Recipient of widespread recognition for his contributions to music and his role as a cultural ambassador'
+    ],
+    audio: null
+  },
+  grace_hamilton: {
+    name:  'Grace Towns Hamilton',
+    dates: '1907 – 1992',
+    photo: 'hotspot_images/Grace Towns Hamilton.jpg',
+    facts: [
+      'First Black woman elected to the Georgia General Assembly, serving in the state House of Representatives from 1965 to 1984',
+      'Broke both racial and gender barriers in Georgia public office, creating space for greater representation in state politics',
+      'Led the Atlanta Urban League for nearly two decades, championing education reform, social justice, and equal opportunity',
+      'Advocated tirelessly for marginalized communities throughout a career spanning civic, political, and legislative arenas',
+      'Her legacy represents persistence, public service, and community advocacy in the face of systemic exclusion'
+    ],
+    audio: null
+  },
+  bazoline_usher: {
+    name:  'Bazoline E. Usher',
+    dates: '1885 – 1966',
+    photo: 'hotspot_images/Bazoline E. Usher.jpg',
+    facts: [
+      'Dedicated 40 years to Atlanta Public Schools, breaking barriers for African American students and faculty throughout a segregated system',
+      'First African American to hold an office in Atlanta City Hall, marking a historic milestone in the city\'s civic history',
+      'Expanded educational opportunity for Black students in the segregated South through tireless advocacy and institutional leadership',
+      'Her career shaped the trajectory of Black education in Atlanta and served as a model of perseverance and public service'
+    ],
+    audio: null
+  },
+  annie_mcpheeters: {
+    name:  'Annie L. McPheeters',
+    dates: '1902 – 1994',
+    photo: 'hotspot_images/Annie L. McPheeters.webp',
+    facts: [
+      'Pioneering librarian who spent decades championing literacy and access to knowledge for Atlanta\'s Black community',
+      'Fought to desegregate Atlanta\'s public library system, helping open equal access to information for African American residents',
+      'Dedicated to preserving African American history and culture through her work in public libraries',
+      'Her advocacy helped transform Atlanta\'s libraries into inclusive institutions serving all citizens regardless of race'
+    ],
+    audio: null
+  },
+  carolyn_yancey: {
+    name:  'Carolyn Dunbar Yancey',
+    dates: null,
+    photo: 'hotspot_images/Carolyn Dunbar Yancey.jpg',
+    facts: [
+      'Celebrated teacher and education executive who dedicated her career to expanding opportunity in Atlanta\'s public schools',
+      'Served on the Atlanta Board of Education for 16 years, shaping policy and advocating for students across the city',
+      'First African American woman appointed to the Georgia University System Board of Regents, breaking a historic barrier in higher education governance',
+      'Her career bridged classroom teaching and institutional leadership, leaving a lasting mark on education in Georgia'
+    ],
+    audio: null
+  },
   john_lewis: {
     name:  'Congressman John Lewis',
     dates: '1940 – 2020',
-    photo: null,
+    photo: 'hotspot_images/John Lewis.webp',
     facts: [
-      'Served in the U.S. House of Representatives for Georgia\'s 5th congressional district from 1987 until his death in 2020',
+      'Key leader in the Civil Rights Movement and longtime U.S. Representative for Georgia\'s 5th Congressional District',
       'Participated in the 1960 Nashville sit-ins and the Freedom Rides',
       'Served as chairman of the Student Nonviolent Coordinating Committee (SNCC) from 1963 to 1966',
       'One of the "Big Six" organizers of the 1963 March on Washington',
-      'Widely regarded as the conscience of the U.S. Congress and a tireless champion of voting rights and nonviolent protest'
+      'Known for his unwavering commitment to justice and democratic participation until his death in 2020'
+    ],
+    audio: null
+  },
+  lillian_lewis: {
+    name:  'Lillian Miles Lewis',
+    dates: null,
+    photo: 'hotspot_images/Lillian Miles Lewis.jpg',
+    facts: [
+      'Educator and political figure who made a lasting impact on Atlanta\'s schools through her work at Clark Atlanta University',
+      'Supported her husband Congressman John Lewis\'s career while pursuing her own distinguished path in education',
+      'Dedicated to empowering students and strengthening Atlanta\'s academic institutions throughout her career'
+    ],
+    audio: null
+  },
+  freddye_henderson: {
+    name:  'Freddye Scarborough Henderson',
+    dates: null,
+    photo: 'hotspot_images/Freddye Henderson.jpg',
+    facts: [
+      'First African American to study Fashion Merchandising at her school, breaking a racial barrier in design education',
+      'Co-founded a national organization for African American fashion designers, expanding professional networks and visibility in the industry',
+      'Produced a landmark fashion show for African American people in 1953, elevating Black designers and models on a public stage',
+      'Her pioneering career helped open doors in the fashion industry for generations of African American creatives'
+    ],
+    audio: null
+  },
+  jean_young: {
+    name:  'Jean Childs Young',
+    dates: '1933 – 1994',
+    photo: 'hotspot_images/Jean Childs Young.jpg',
+    facts: [
+      'Education leader and children\'s rights advocate who dedicated her career to expanding opportunity for young people',
+      'Built early childhood curriculum for Atlanta Public Schools, shaping foundational education for thousands of students',
+      'Appointed by President Jimmy Carter to chair the 1979 International Year of the Child, bringing global attention to children\'s welfare',
+      'Wife of Atlanta Mayor and UN Ambassador Andrew Young; a civic leader in her own right throughout the Civil Rights era and beyond'
+    ],
+    audio: null
+  },
+  carrie_steele_logan: {
+    name:  'Carrie Steele Logan',
+    dates: '1829 – 1900',
+    photo: 'hotspot_images/Carrie Steele Logan.avif',
+    facts: [
+      'Formerly enslaved woman who founded the Carrie Steele-Pitts Home in Atlanta — the oldest African American orphanage in America still in operation',
+      'Raised funds to establish the orphanage by writing and selling her autobiography and appealing to the community',
+      'Dedicated her life to sheltering and caring for abandoned Black children in post-Civil War Atlanta',
+      'Her legacy of compassion and determination continues through the institution she built more than 140 years ago'
+    ],
+    audio: null
+  },
+  ludie_andrews: {
+    name:  'Ludie Clay Andrews',
+    dates: null,
+    photo: 'hotspot_images/Ludie Clay Andrews.jpg',
+    facts: [
+      'First African American registered nurse in the state of Georgia, breaking a racial barrier in the healthcare system',
+      'Decades of leadership at Spelman College\'s MacVicar Hospital helped shape standards of care for Black patients in the South',
+      'Trained and mentored generations of Black healthcare providers, expanding the pipeline for African American medical professionals',
+      'Her pioneering career laid the groundwork for equitable healthcare access in Georgia and across the region'
+    ],
+    audio: null
+  },
+  geneva_haugabrooks: {
+    name:  'Geneva Moton Haugabrooks',
+    dates: null,
+    photo: 'hotspot_images/Geneva Moton Haugabrooks.jpg',
+    facts: [
+      'Nicknamed "Mama Haugabrooks," she was the first and only Black woman to open a funeral home in Atlanta at the time',
+      'A trailblazer for female entrepreneurs in a male-dominated industry during an era of racial and gender exclusion',
+      'Her funeral home served Atlanta\'s Black community with dignity during a time when Black families had few options',
+      'Her legacy represents both entrepreneurial courage and deep commitment to community care'
     ],
     audio: null
   }
@@ -205,14 +373,14 @@ const timelineInfo = {
     scene: 's01'
   },
   1894: {
-    title: 'Rev. A. D. Williams Leads Ebenezer',
-    body:  'Adam Daniel Williams became pastor of Ebenezer Baptist Church in 1894, growing its congregation from just a handful of members to more than 750. He built Ebenezer into a center of political and community life, co-founded the Atlanta NAACP in 1917, and served as its first president. His daughter Alberta was the mother of Dr. Martin Luther King Jr. Rev. Williams and his wife Jennie are buried here at South-View.',
-    scene: 's16'
+    title: 'William H. Crogman Leads Clark University',
+    body:  'William H. Crogman, born in the Caribbean and one of the foremost classical scholars of his era, joined Clark University in Atlanta where he would eventually serve as president from 1903 to 1910 — one of the first African Americans to lead an Atlanta University System institution. A champion of rigorous education and character development, his career shaped generations of Black students in the South. He is buried here at South-View.',
+    scene: 's14'
   },
   1904: {
-    title: 'Adrienne Herndon Makes Her Stage Debut',
-    body:  'In 1904, Adrienne McNeil Herndon made her professional acting debut in Boston under the stage name Anne Du Bignon — one of the first African American women to pursue a professional stage career. A professor at Atlanta University, she taught elocution and staged Shakespearean productions. She later graduated from the School of Dramatic Arts in New York City (1908) and designed the Herndon family mansion, Diamond Hill. She is buried here at South-View.',
-    scene: 's12'
+    title: 'Ludie Clay Andrews — Georgia\'s First Black Registered Nurse',
+    body:  'Ludie Clay Andrews became the first African American registered nurse in the state of Georgia, breaking a racial barrier in healthcare. Her decades of leadership at Spelman College\'s MacVicar Hospital shaped standards of care for Black patients and trained generations of Black healthcare providers. Her pioneering career laid the groundwork for equitable healthcare access across the South. She is buried here at South-View.',
+    scene: 's05'
   },
   1905: {
     title: 'Herndon Builds an Empire',
@@ -220,14 +388,14 @@ const timelineInfo = {
     scene: 's13'
   },
   1906: {
-    title: 'Atlanta Race Massacre',
-    body:  'On September 22–24, 1906, white mobs tore through Atlanta\'s Black neighborhoods, killing residents, burning businesses, and attacking anyone in their path. Union Army veteran George "Union" Wilder, buried here at South-View, was killed defending his home in Brownsville with a muzzle-loaded musket. His stand is credited with helping slow the rioters. At least 12 Black Atlantans were killed.',
-    scene: 's15'
+    title: 'Robert Grant Founds Zion Hill Baptist Church',
+    body:  'Robert Grant, a skilled blacksmith and drayman in post-Civil War Atlanta, founded Zion Hill Baptist Church — embodying the vital intersection of Black labor and spiritual leadership during Reconstruction. His life stands as a testament to the foundational role of the Black church in fostering community resilience and organizing African American life in Atlanta\'s earliest years of freedom. He is buried here at South-View.',
+    scene: 's01'
   },
   1911: {
-    title: 'Moses Amos — First Licensed Black Pharmacist in Georgia',
-    body:  'In June 1911, Moses Amos passed the Georgia State pharmacy exam and became the first African American granted a druggist license by the Georgia State Board of Pharmacy. He went on to open the Gate City Drug Store on Auburn Avenue — hiring the first African American woman to work in a public place in Atlanta and mentoring nine young Black men who became professionals in pharmacy, medicine, and dentistry. He is buried here at South-View.',
-    scene: 's07'
+    title: 'Bazoline E. Usher Begins Her Career in Atlanta Schools',
+    body:  'Bazoline E. Usher dedicated 40 years to Atlanta Public Schools, breaking barriers for African American students and faculty throughout a segregated system. She became the first African American to hold an office in Atlanta City Hall, marking a historic milestone in the city\'s civic history. Her advocacy expanded educational opportunity for Black students across the South. She is buried here at South-View.',
+    scene: 's20'
   },
   1927: {
     title: 'Herndon Passes',
@@ -235,9 +403,9 @@ const timelineInfo = {
     scene: 's13'
   },
   1944: {
-    title: 'Tuskegee Airman Shot Down',
-    body:  'On October 13, 1944, First Lieutenant Walter Westmoreland — a Morehouse College graduate and member of the 332nd Fighter Squadron — was shot down while returning from an escort mission to Blechhammer, Germany. He and his fellow "Red Tail Flyers" proved that Black pilots could fly and fight with excellence in the face of a segregated military and a skeptical nation.',
-    scene: 's11'
+    title: 'Graham W. Jackson Sr. — Music at the White House',
+    body:  'Graham W. Jackson Sr., legendary Atlanta musician and personal friend of President Franklin D. Roosevelt, had performed regularly at Warm Springs, Georgia throughout the 1930s and 40s. His accordion performance of "Going Home" at Roosevelt\'s funeral in 1945 became one of the most iconic images of American grief. His career highlighted the profound cultural influence of Atlanta\'s Black community on national life. He is buried here at South-View.',
+    scene: 's29'
   },
   1948: {
     title: 'John Wesley Dobbs Desegregates Atlanta\'s Police',
@@ -245,8 +413,8 @@ const timelineInfo = {
     scene: 's02'
   },
   1950: {
-    title: 'Carrie Steele Pitts Home — Named in Her Honor',
-    body:  'In 1950, the Carrie Steele Orphans Home was renamed the Carrie Steele Pitts Home in recognition of superintendent Clara Maxwell Cater Pitts, who had modernized the facility, secured United Way funding, and relocated the home to Roy Street in southwest Atlanta. An Atlanta Public School also bears her name. She is buried here at South-View.',
+    title: 'Carrie Steele Logan\'s Orphanage Endures',
+    body:  'The Carrie Steele-Pitts Home, founded by formerly enslaved Carrie Steele Logan in the late 19th century, continued to serve Atlanta\'s most vulnerable children into the mid-20th century — becoming the oldest African American orphanage in America still in operation. Logan raised its founding funds by writing and selling her autobiography. Her legacy of compassion and determination lives on in the institution she built. She is buried here at South-View.',
     scene: 's04'
   },
   1961: {
@@ -256,13 +424,13 @@ const timelineInfo = {
   },
   1963: {
     title: 'March on Washington',
-    body:  'On August 28, 1963, more than 250,000 people gathered at the Lincoln Memorial. John Lewis — then chairman of SNCC and one of the "Big Six" organizers — delivered one of the day\'s most passionate speeches. Julian Bond, also organizing through SNCC, helped mobilize a generation of student activists. Both men are buried here at South-View.',
-    scene: 's30'
+    body:  'On August 28, 1963, more than 250,000 people gathered at the Lincoln Memorial. John Lewis — then chairman of SNCC and one of the "Big Six" organizers — delivered one of the day\'s most passionate speeches, calling for justice and democratic participation. He is buried here at South-View alongside his wife Lillian Miles Lewis.',
+    scene: 's31'
   },
   1974: {
-    title: 'Henry Aaron Breaks the Record',
-    body:  'On April 8, 1974, Hank Aaron hit his 715th career home run, surpassing Babe Ruth\'s long-standing record despite years of racial hatred, death threats, and hate mail. Aaron used his Hall of Fame career as a platform for civil rights, served on the NAACP board, and received the Presidential Medal of Freedom. He rests here at South-View.',
-    scene: 's27'
+    title: 'Grace Towns Hamilton Serves in the Georgia General Assembly',
+    body:  'Grace Towns Hamilton, the first Black woman elected to the Georgia General Assembly, served in the state House of Representatives from 1965 to 1984 — breaking both racial and gender barriers in Georgia public office. She previously led the Atlanta Urban League for nearly two decades, championing education reform and equal opportunity. Her legacy represents persistence and community advocacy in the face of systemic exclusion. She is buried here at South-View.',
+    scene: 's29'
   },
   1984: {
     title: 'Rev. Martin Luther King Sr. Passes',
@@ -270,9 +438,9 @@ const timelineInfo = {
     scene: 's26'
   },
   2015: {
-    title: 'Julian Bond Passes',
-    body:  'Julian Bond — Civil Rights leader, SNCC co-founder, Georgia legislator, and longtime chairman of the NAACP — died on August 15, 2015. His activism began as a Morehouse student, and he spent his life organizing, litigating, and legislating for equality. He is buried here at South-View.',
-    scene: 's30'
+    title: 'John Lewis — A Life of Good Trouble',
+    body:  'Congressman John Lewis, a towering figure of the Civil Rights Movement and Georgia\'s 5th Congressional District representative for over three decades, died on July 17, 2020. Known for his unwavering commitment to justice and democratic participation, he often urged people to make "good trouble." His wife Lillian Miles Lewis, an educator and civic partner, preceded him. Both rest here at South-View.',
+    scene: 's31'
   },
   2018: {
     title: 'Bench by the Road — 50 Years After Dr. King',
@@ -310,6 +478,11 @@ const sceneDefs = [
           heading: 'The Angel — Dedicated 1961',
           body: 'Dedicated in 1961 at South-View\'s 75th anniversary, this monument\'s front lists the six founders — all born enslaved — who chartered the cemetery in 1886. The back is a who\'s who of Black Atlanta. South-View has never been segregated; people of all races and religions rest on these grounds. Over 90,000 souls are currently buried here.'
         }
+      },
+      {
+        type: 'info', pitch: -8, yaw: -25, cssClass: 'hs-person',
+        createTooltipFunc: createPersonTooltip,
+        createTooltipArgs: 'robert_grant'
       }
     ]
   },
@@ -326,13 +499,13 @@ const sceneDefs = [
   },
   /* 03 */ { id: 's03', title: 'Main Drive',           file: 'scene_03.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110 },
   /* 04 */ {
-    id: 's04', title: 'Entry Path',
+    id: 's04', title: 'Carrie Steele Logan',
     file: 'scene_04.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110,
     extra: [
       {
-        type: 'info', pitch: -8, yaw: 0, cssClass: 'hs-person',
+        type: 'info', pitch: -5, yaw: 0, cssClass: 'hs-person',
         createTooltipFunc: createPersonTooltip,
-        createTooltipArgs: 'pitts'
+        createTooltipArgs: 'carrie_steele_logan'
       }
     ]
   },
@@ -347,21 +520,16 @@ const sceneDefs = [
           heading: 'Cedar Grove',
           body: 'These ancient Southern red cedars were planted in the cemetery\'s earliest years and have stood witness to over a century of Atlanta\'s Black history. Cedar trees carry deep symbolic meaning — their evergreen boughs representing eternal life and remembrance.'
         }
+      },
+      {
+        type: 'info', pitch: -12, yaw: 10, cssClass: 'hs-person',
+        createTooltipFunc: createPersonTooltip,
+        createTooltipArgs: 'ludie_andrews'
       }
     ]
   },
   /* 06 */ { id: 's06', title: 'North Walk',          file: 'scene_06.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110 },
-  /* 07 */ {
-    id: 's07', title: 'Moses Amos',
-    file: 'scene_07.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110,
-    extra: [
-      {
-        type: 'info', pitch: -8, yaw: 0, cssClass: 'hs-person',
-        createTooltipFunc: createPersonTooltip,
-        createTooltipArgs: 'amos'
-      }
-    ]
-  },
+  /* 07 */ { id: 's07', title: 'Section 7',          file: 'scene_07.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110 },
   /* 08 */ {
     id: 's08', title: 'Oak Alley',
     file: 'scene_08.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110
@@ -391,28 +559,8 @@ const sceneDefs = [
       }
     ]
   },
-  /* 11 */ {
-    id: 's11', title: 'Walter Westmoreland',
-    file: 'scene_11.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110,
-    extra: [
-      {
-        type: 'info', pitch: -28, yaw: 0, cssClass: 'hs-person',
-        createTooltipFunc: createPersonTooltip,
-        createTooltipArgs: 'westmoreland'
-      }
-    ]
-  },
-  /* 12 */ {
-    id: 's12', title: 'Adrienne Herndon',
-    file: 'scene_12.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110,
-    extra: [
-      {
-        type: 'info', pitch: -30, yaw: 0, cssClass: 'hs-person',
-        createTooltipFunc: createPersonTooltip,
-        createTooltipArgs: 'adrienne_herndon'
-      }
-    ]
-  },
+  /* 11 */ { id: 's11', title: 'Section 11',         file: 'scene_11.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110 },
+  /* 12 */ { id: 's12', title: 'Section 12',         file: 'scene_12.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110 },
   /* 13 */ {
     id: 's13', title: 'Alonzo Herndon',
     file: 'scene_13.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110,
@@ -424,29 +572,29 @@ const sceneDefs = [
       }
     ]
   },
-  /* 14 */ { id: 's14', title: 'Heritage Walk',        file: 'scene_14.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110 },
+  /* 14 */ {
+    id: 's14', title: 'William H. Crogman',
+    file: 'scene_14.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110,
+    extra: [
+      {
+        type: 'info', pitch: -32, yaw: 50, cssClass: 'hs-person',
+        createTooltipFunc: createPersonTooltip,
+        createTooltipArgs: 'crogman'
+      }
+    ]
+  },
   /* 15 */ {
-    id: 's15', title: 'George "Union" Wilder',
+    id: 's15', title: 'Geneva Moton Haugabrooks',
     file: 'scene_15.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110,
     extra: [
       {
-        type: 'info', pitch: -8, yaw: 0, cssClass: 'hs-person',
+        type: 'info', pitch: -5, yaw: 0, cssClass: 'hs-person',
         createTooltipFunc: createPersonTooltip,
-        createTooltipArgs: 'wilder'
+        createTooltipArgs: 'geneva_haugabrooks'
       }
     ]
   },
-  /* 16 */ {
-    id: 's16', title: 'Williams Plot',
-    file: 'scene_16.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110,
-    extra: [
-      {
-        type: 'info', pitch: -8, yaw: 0, cssClass: 'hs-person',
-        createTooltipFunc: createPersonTooltip,
-        createTooltipArgs: 'williams_ad'
-      }
-    ]
-  },
+  /* 16 */ { id: 's16', title: 'Section 16',         file: 'scene_16.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110 },
   /* 17 */ { id: 's17', title: 'Garden View',          file: 'scene_17.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110 },
   /* 18 */ { id: 's18', title: 'Reflections Path',    file: 'scene_18.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110 },
   /* 19 */ {
@@ -464,8 +612,15 @@ const sceneDefs = [
     ]
   },
   /* 20 */ {
-    id: 's20', title: 'West Walk',
-    file: 'scene_20.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110
+    id: 's20', title: 'Bazoline E. Usher',
+    file: 'scene_20.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110,
+    extra: [
+      {
+        type: 'info', pitch: -3, yaw: 10, cssClass: 'hs-person',
+        createTooltipFunc: createPersonTooltip,
+        createTooltipArgs: 'bazoline_usher'
+      }
+    ]
   },
   /* 21 */ { id: 's21', title: 'Shaded Grounds',      file: 'scene_21.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110 },
   /* 22 */ {
@@ -483,7 +638,17 @@ const sceneDefs = [
     ]
   },
   /* 23 */ { id: 's23', title: 'West Grounds',        file: 'scene_23.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110 },
-  /* 24 */ { id: 's24', title: 'Heritage Section',    file: 'scene_24.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110 },
+  /* 24 */ {
+    id: 's24', title: 'Annie L. McPheeters',
+    file: 'scene_24.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110,
+    extra: [
+      {
+        type: 'info', pitch: -7, yaw: -20, cssClass: 'hs-person',
+        createTooltipFunc: createPersonTooltip,
+        createTooltipArgs: 'annie_mcpheeters'
+      }
+    ]
+  },
   /* 25 */ { id: 's25', title: 'Hilltop Memorial',     file: 'scene_25.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110 },
   /* 26 */ {
     id: 's26', title: 'King Family Mausoleum',
@@ -493,22 +658,17 @@ const sceneDefs = [
         type: 'info', pitch: -8, yaw: -30, cssClass: 'hs-person',
         createTooltipFunc: createPersonTooltip,
         createTooltipArgs: 'king_sr'
-      }
-    ]
-  },
-  /* 27 */ {
-    id: 's27', title: 'Henry Aaron',
-    file: 'scene_27.jpg', initialYaw: -30, initialPitch: -5, initialHfov: 110,
-    extra: [
+      },
       {
-        type: 'info', pitch: -8, yaw: -30, cssClass: 'hs-person',
+        type: 'info', pitch: -8, yaw: -15, cssClass: 'hs-person',
         createTooltipFunc: createPersonTooltip,
-        createTooltipArgs: 'henry_aaron'
+        createTooltipArgs: 'benjamin_mays'
       }
     ]
   },
+  /* 27 */ { id: 's27', title: 'Section 27',         file: 'scene_27.jpg', initialYaw: -30, initialPitch: -5, initialHfov: 110 },
   /* 28 */ {
-    id: 's28', title: 'Chapel View',
+    id: 's28', title: 'Carolyn Dunbar Yancey',
     file: 'scene_28.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110,
     extra: [
       {
@@ -518,19 +678,34 @@ const sceneDefs = [
           heading: 'The Memorial Chapel',
           body: 'South-View\'s chapel has hosted the final rites of some of Atlanta\'s most prominent citizens. Built to serve a community denied access to white funeral homes and churches, it became a gathering place for grieving families across Atlanta\'s Black neighborhoods for over a century.'
         }
+      },
+      {
+        type: 'info', pitch: -15, yaw: 180, cssClass: 'hs-person',
+        createTooltipFunc: createPersonTooltip,
+        createTooltipArgs: 'carolyn_yancey'
       }
     ]
   },
-  /* 29 */ { id: 's29', title: 'Chapel Grounds',       file: 'scene_29.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110 },
-  /* 30 */ {
-    id: 's30', title: 'Julian Bond',
-    file: 'scene_31.jpg', initialYaw: 180, initialPitch: -5, initialHfov: 110,
+  /* 29 */ {
+    id: 's29', title: 'Graham W. Jackson Sr. & Grace Towns Hamilton',
+    file: 'scene_29.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110,
     extra: [
       {
-        type: 'info', pitch: -8, yaw: 180, cssClass: 'hs-person',
+        type: 'info', pitch: -15, yaw: -20, cssClass: 'hs-person',
         createTooltipFunc: createPersonTooltip,
-        createTooltipArgs: 'julian_bond'
+        createTooltipArgs: 'graham_jackson'
       },
+      {
+        type: 'info', pitch: -15, yaw: 0, cssClass: 'hs-person',
+        createTooltipFunc: createPersonTooltip,
+        createTooltipArgs: 'grace_hamilton'
+      }
+    ]
+  },
+  /* 30 */ {
+    id: 's30', title: 'Horace Mann Bond',
+    file: 'scene_31.jpg', initialYaw: 180, initialPitch: -5, initialHfov: 110,
+    extra: [
       {
         type: 'info', pitch: -8, yaw: 195, cssClass: 'hs-person',
         createTooltipFunc: createPersonTooltip,
@@ -538,7 +713,22 @@ const sceneDefs = [
       }
     ]
   },
-  /* 31 */ { id: 's31', title: 'Final Rest',           file: 'scene_30.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110 },
+  /* 31 */ {
+    id: 's31', title: 'John Lewis & Lillian Miles Lewis',
+    file: 'scene_30.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110,
+    extra: [
+      {
+        type: 'info', pitch: -8, yaw: 130, cssClass: 'hs-person',
+        createTooltipFunc: createPersonTooltip,
+        createTooltipArgs: 'john_lewis'
+      },
+      {
+        type: 'info', pitch: -8, yaw: 150, cssClass: 'hs-person',
+        createTooltipFunc: createPersonTooltip,
+        createTooltipArgs: 'lillian_lewis'
+      }
+    ]
+  },
   /* 32 */ {
     id: 's32', title: 'Bench by the Road',
     file: 'scene_32.jpg', initialYaw: 135, initialPitch: -5, initialHfov: 110,
@@ -550,6 +740,16 @@ const sceneDefs = [
           heading: 'Bench by the Side of the Road',
           body: 'Installed in 2018 on the 50th anniversary of Dr. King\'s burial, this bench and plaque are part of the Toni Morrison Society\'s memorial history initiative. It honors Dr. King\'s legacy of nonviolent pursuit of social justice and recognizes South-View as a site of dignity and equality for African Americans for more than 100 years.'
         }
+      },
+      {
+        type: 'info', pitch: 5, yaw: 155, cssClass: 'hs-person',
+        createTooltipFunc: createPersonTooltip,
+        createTooltipArgs: 'freddye_henderson'
+      },
+      {
+        type: 'info', pitch: 5, yaw: 175, cssClass: 'hs-person',
+        createTooltipFunc: createPersonTooltip,
+        createTooltipArgs: 'jean_young'
       }
     ]
   }
