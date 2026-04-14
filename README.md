@@ -1,4 +1,4 @@
-# South-View Cemetery — Juneteenth Heritage Tour
+# South-View Cemetery — Historical Figures Tour
 
 An interactive 360° virtual tour of South-View Cemetery in Atlanta, Georgia, built to honor the cemetery's historic role in Black Atlanta. Visitors explore 12 curated stops via immersive panoramic photography, clickable hotspots on notable figures, and a contextual timeline spanning 1865 to 2021.
 

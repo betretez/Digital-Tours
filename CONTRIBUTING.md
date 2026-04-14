@@ -1,6 +1,6 @@
 # Contributing Guide
 
-Step-by-step instructions for updating the South-View Cemetery Juneteenth Heritage Tour. All tour content lives in two files: `js/tour.js` (data) and `css/tour.css` (styling). No build process is required.
+Step-by-step instructions for updating the South-View Cemetery Historical Figures Tour. All tour content lives in two files: `js/tour.js` (data) and `css/tour.css` (styling). No build process is required.
 
 ---
 
