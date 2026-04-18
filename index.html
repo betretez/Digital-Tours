@@ -98,9 +98,20 @@
             </div>
         </div>
 
-        <!-- Fixed Navigation Panel -->
+        <!-- Hotspot List for current scene -->
+        <div id="hotspot-list">
+            <div class="hotspot-list-title">HOTSPOTS HERE</div>
+            <div id="hotspot-list-items">
+                <div class="hotspot-list-empty">No hotspots at this stop</div>
+            </div>
+        </div>
+
+    </div><!-- /right-panel -->
+
+    <!-- Mini-map with integrated navigation -->
+    <div id="minimap">
+        <!-- Navigation Panel -->
         <div id="nav-panel">
-            <!-- Back -->
             <div class="nav-slot nav-slot-back">
                 <button id="btn-back" class="nav-btn nav-btn-back" aria-label="Previous stop">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
@@ -110,11 +121,7 @@
                 </button>
                 <div class="nav-dest nav-dest-back" id="nav-label-back">Start of tour</div>
             </div>
-
-            <!-- Divider -->
             <div class="nav-divider"></div>
-
-            <!-- Forward -->
             <div class="nav-slot nav-slot-fwd">
                 <button id="btn-forward" class="nav-btn nav-btn-fwd" aria-label="Next stop">
                     <span>Next</span>
@@ -125,13 +132,9 @@
                 <div class="nav-dest nav-dest-fwd" id="nav-label-fwd">Main Drive</div>
             </div>
         </div>
-
-    </div><!-- /right-panel -->
-
-    <!-- Mini-map: 32-scene curved cemetery path -->
-    <div id="minimap">
+        <div class="minimap-nav-divider"></div>
         <div class="minimap-inner">
-            <svg viewBox="0 0 210 200" width="210" height="200">
+            <svg viewBox="0 0 210 200" width="158" height="150">
                 <!-- Cemetery field with subtle green tint -->
                 <rect x="8" y="8" width="194" height="184" rx="8"
                     fill="rgba(14,26,14,0.45)" stroke="rgba(212,175,55,0.22)" stroke-width="1"/>
@@ -269,11 +272,6 @@
                 <span class="timeline-dot"></span>
                 <span class="timeline-year">1948</span>
                 <span class="timeline-event">Dobbs Desegregates</span>
-            </div>
-            <div class="timeline-marker" data-year="1950" data-scene="s04" style="left:55.6%">
-                <span class="timeline-dot"></span>
-                <span class="timeline-year">1950</span>
-                <span class="timeline-event">Pitts Home</span>
             </div>
             <div class="timeline-marker" data-year="1961" data-scene="s02" style="left:61.1%">
                 <span class="timeline-dot"></span>

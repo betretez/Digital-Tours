@@ -261,13 +261,15 @@ html, body {
    ============================================= */
 #right-panel {
     position: fixed;
-    top: 88px;
-    right: 20px;
+    bottom: 80px;
+    left: 20px;
     z-index: 100;
     display: flex;
     flex-direction: column;
     gap: 10px;
     width: 148px;
+    max-height: calc(100vh - 160px);
+    overflow-y: auto;
 }
 
 /* =============================================
@@ -308,14 +310,54 @@ html, body {
 }
 
 /* =============================================
-   NAVIGATION PANEL  (inside right-panel, below legend)
+   HOTSPOT LIST  (inside right-panel)
    ============================================= */
-#nav-panel {
+#hotspot-list {
     background: rgba(10,10,12,0.78);
     backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(212,175,55,0.1);
     border-radius: var(--radius-md);
-    padding: 10px 0;
+    padding: 10px 14px;
+}
+.hotspot-list-title {
+    font-family: var(--font-display); font-size: 0.5rem; letter-spacing: 3px;
+    color: var(--text-muted); margin-bottom: 9px; text-align: center;
+}
+.hotspot-list-item {
+    display: flex; align-items: center; gap: 8px;
+    padding: 5px 8px; margin-bottom: 4px;
+    border-radius: 6px; cursor: pointer;
+    transition: background 0.2s ease;
+}
+.hotspot-list-item:hover { background: rgba(212,175,55,0.08); }
+.hotspot-list-item:last-child { margin-bottom: 0; }
+.hotspot-list-dot {
+    width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0;
+}
+.hotspot-list-dot.hl-info {
+    background: radial-gradient(circle, rgba(255,255,255,0.9) 20%, rgba(212,175,55,0.6) 60%, transparent 70%);
+    border: 1px solid rgba(255,255,255,0.35);
+}
+.hotspot-list-dot.hl-person {
+    background: radial-gradient(circle, rgba(255,255,255,0.9) 20%, rgba(196,127,219,0.7) 60%, transparent 70%);
+    border: 1px solid rgba(196,127,219,0.5);
+}
+.hotspot-list-name {
+    font-family: var(--font-body); font-size: 0.72rem;
+    color: rgba(240,236,226,0.7); white-space: nowrap;
+    overflow: hidden; text-overflow: ellipsis;
+}
+.hotspot-list-empty {
+    font-family: var(--font-body); font-size: 0.72rem;
+    font-style: italic; color: var(--text-muted);
+    text-align: center; padding: 4px 0;
+}
+
+/* =============================================
+   NAVIGATION PANEL  (inside right-panel, below legend)
+   ============================================= */
+#nav-panel {
+    padding: 8px 0 4px;
     width: 100%;
 }
 
@@ -375,6 +417,12 @@ html, body {
 }
 .nav-slot:hover .nav-dest { color: rgba(212,175,55,0.7); }
 
+.minimap-nav-divider {
+    height: 1px;
+    background: rgba(212,175,55,0.12);
+    margin: 4px 12px;
+}
+
 /* =============================================
    MINI-MAP  (grows 200% on hover)
    ============================================= */
@@ -389,13 +437,13 @@ html, body {
                 box-shadow 0.35s ease, border-color 0.35s ease;
     cursor: default;
 }
-#minimap:hover {
-    transform: scale(2);
+#minimap:has(.minimap-inner:hover) {
+    transform: scale(1.8);
     box-shadow: 0 12px 40px rgba(0,0,0,0.55), 0 0 0 1px rgba(212,175,55,0.25);
     border-color: rgba(212,175,55,0.3);
 }
 
-.minimap-inner svg { display: block; }
+.minimap-inner svg { display: block; width: 100%; height: auto; }
 
 .map-dot {
     fill: rgba(212,175,55,0.18);
