@@ -5,10 +5,11 @@
    ================================================================ */
 const people = {
   herndon: {
+    name:  'Alonzo Franklin Herndon',
+    dates: '1858 – 1927',
     photo: 'hotspot_images/Alonzo Herndon.jpg',
-    infographic: 'Images_SVC/Screenshot%202026-04-06%20at%2010.00.22%E2%80%AFAM.png',
     facts: [
-      'Born enslaved in Social Circle, Georgia',
+      'Born into slavery, Herndon became Atlanta\'s first Black millionaire and founded Atlanta Life Insurance Company, one of the most successful Black-owned businesses in American history',
       'Founded Atlanta Life Insurance Company in 1905 — the largest Black-owned insurance company in the U.S.',
       'Transformed a $1.25 shoeshine cloth into a barbershop empire serving Atlanta\'s elite',
       'His Classical Revival mansion on University Drive is now a National Historic Landmark',
@@ -79,19 +80,6 @@ const people = {
       'Worked at the Huss Pharmacy on Peachtree Street early in his career, then became proprietor of the Gate City Drug Store on Auburn Avenue',
       'In 1914 opened a new Gate City Drugstore in the Odd Fellows Building and hired the first African American woman to work in a public place in Atlanta',
       'Employed nine young African American men who went on to earn college degrees and establish careers in pharmacy, medicine, and dentistry'
-    ],
-    audio: null
-  },
-  pace: {
-    name:  'Dinah Watts Pace',
-    dates: '1833 – 1930',
-    photo: 'hotspot_images/Dinah Watts Pace.jpg',
-    infographic: 'Images_SVC/Screenshot%202026-04-06%20at%2010.00.42%E2%80%AFAM.png',
-    facts: [
-      'Born enslaved in Athens, Georgia in 1833; as a teenager started a Sunday School in the Summer Hill neighborhood that grew into the Reed Street Baptist Church (today Paradise Missionary Baptist Church)',
-      'Graduated from Atlanta University with a teaching certificate and taught in Covington, Georgia',
-      'Founded one of the first orphanages for African American children in Georgia — the Covington Colored Orphans Home; Wellesley College students were regular contributors',
-      'The orphanage operated until 1930 when Pace was fatally burned in an open fireplace accident'
     ],
     audio: null
   },
@@ -320,18 +308,6 @@ const people = {
     ],
     audio: null
   },
-  carrie_steele_logan: {
-    name:  'Carrie Steele Logan',
-    dates: '1829 – 1900',
-    photo: 'hotspot_images/Carrie Steele Logan.avif',
-    facts: [
-      'Formerly enslaved woman who founded the Carrie Steele-Pitts Home in Atlanta — the oldest African American orphanage in America still in operation',
-      'Raised funds to establish the orphanage by writing and selling her autobiography and appealing to the community',
-      'Dedicated her life to sheltering and caring for abandoned Black children in post-Civil War Atlanta',
-      'Her legacy of compassion and determination continues through the institution she built more than 140 years ago'
-    ],
-    audio: null
-  },
   ludie_andrews: {
     name:  'Ludie Clay Andrews',
     dates: null,
@@ -411,11 +387,6 @@ const timelineInfo = {
     title: 'John Wesley Dobbs Desegregates Atlanta\'s Police',
     body:  'Through the Atlanta Civic and Political League and years of voter-registration work, John Wesley Dobbs helped win a historic breakthrough in 1948: eight Black officers joined the Atlanta Police Department. They were required to use the Butler Street YMCA as their precinct, could not wear uniforms to and from work, and were only permitted to patrol Black neighborhoods on foot — but the door had been opened. "The Mayor of Auburn Avenue" is buried here at South-View.',
     scene: 's02'
-  },
-  1950: {
-    title: 'Carrie Steele Logan\'s Orphanage Endures',
-    body:  'The Carrie Steele-Pitts Home, founded by formerly enslaved Carrie Steele Logan in the late 19th century, continued to serve Atlanta\'s most vulnerable children into the mid-20th century — becoming the oldest African American orphanage in America still in operation. Logan raised its founding funds by writing and selling her autobiography. Her legacy of compassion and determination lives on in the institution she built. She is buried here at South-View.',
-    scene: 's04'
   },
   1961: {
     title: 'South-View\'s 75th Anniversary & The Angel Monument',
@@ -498,17 +469,7 @@ const sceneDefs = [
     ]
   },
   /* 03 */ { id: 's03', title: 'Main Drive',           file: 'scene_03.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110 },
-  /* 04 */ {
-    id: 's04', title: 'Carrie Steele Logan',
-    file: 'scene_04.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110,
-    extra: [
-      {
-        type: 'info', pitch: -5, yaw: 0, cssClass: 'hs-person',
-        createTooltipFunc: createPersonTooltip,
-        createTooltipArgs: 'carrie_steele_logan'
-      }
-    ]
-  },
+  /* 04 */ { id: 's04', title: 'Section 4',            file: 'scene_04.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110 },
   /* 05 */ {
     id: 's05', title: 'Cedar Grove',
     file: 'scene_05.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110,
@@ -534,17 +495,7 @@ const sceneDefs = [
     id: 's08', title: 'Oak Alley',
     file: 'scene_08.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110
   },
-  /* 09 */ {
-    id: 's09', title: 'Dinah Watts Pace',
-    file: 'scene_09.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110,
-    extra: [
-      {
-        type: 'info', pitch: -8, yaw: 0, cssClass: 'hs-person',
-        createTooltipFunc: createPersonTooltip,
-        createTooltipArgs: 'pace'
-      }
-    ]
-  },
+  /* 09 */ { id: 's09', title: 'Section 9',            file: 'scene_09.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110 },
   /* 10 */ {
     id: 's10', title: 'Magnolia Walk',
     file: 'scene_10.jpg', initialYaw: 0, initialPitch: -5, initialHfov: 110,
@@ -965,6 +916,41 @@ function updateUI(sceneId) {
   document.querySelectorAll('.map-dot').forEach(d => d.classList.remove('active'));
   const activeDot = document.querySelector(`.map-dot[data-scene="${sceneId}"]`);
   if (activeDot) activeDot.classList.add('active');
+
+  /* —— Hotspot list —— */
+  const listContainer = document.getElementById('hotspot-list-items');
+  const hotspots = def.extra || [];
+  if (hotspots.length === 0) {
+    listContainer.innerHTML = '<div class="hotspot-list-empty">No hotspots at this stop</div>';
+  } else {
+    listContainer.innerHTML = hotspots.map((hs, i) => {
+      const isPerson = hs.cssClass === 'hs-person';
+      const dotClass = isPerson ? 'hl-person' : 'hl-info';
+      let name;
+      if (isPerson && typeof hs.createTooltipArgs === 'string') {
+        const p = people[hs.createTooltipArgs];
+        name = p ? p.name : hs.createTooltipArgs;
+      } else if (hs.createTooltipArgs && hs.createTooltipArgs.heading) {
+        name = hs.createTooltipArgs.heading;
+      } else {
+        name = 'Hotspot ' + (i + 1);
+      }
+      return '<div class="hotspot-list-item" data-hs-index="' + i + '">' +
+        '<span class="hotspot-list-dot ' + dotClass + '"></span>' +
+        '<span class="hotspot-list-name">' + name + '</span></div>';
+    }).join('');
+    listContainer.querySelectorAll('.hotspot-list-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const hsIdx = parseInt(item.dataset.hsIndex);
+        const hs = hotspots[hsIdx];
+        if (hs.cssClass === 'hs-person' && typeof hs.createTooltipArgs === 'string') {
+          showPersonCard(hs.createTooltipArgs);
+        } else if (hs.createTooltipArgs && hs.createTooltipArgs.heading) {
+          showInfoCard(hs.createTooltipArgs.heading, hs.createTooltipArgs.body);
+        }
+      });
+    });
+  }
 }
 
 /* ================================================================
